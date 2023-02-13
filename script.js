@@ -1,4 +1,4 @@
-/*
+
 function Enviar(){
     var nome = document.getElementById("nomeid")
     var fone = document.getElementById("foneid")
@@ -10,7 +10,7 @@ function Enviar(){
         window.location.reload(true)
     }
 }
-*/
+
 
 window.sr = ScrollReveal({reset: true});
 
