@@ -25,12 +25,13 @@ div#apresentacao{
     
 }
 #nome{
-    width: 400px;
+    width: 550px;
     height: 200px;
+    
 }
 #nometitulo{
-    font-size: 40pt;
-    padding-top: 5vw;
+    font-size: 50pt;
+    padding-top: 3vw;
     margin-left: 10px;
     color: white;
 }
