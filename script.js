@@ -20,7 +20,7 @@ sr.reveal('.titulo_conhecimento', {
     duration: 2000
 });
 sr.reveal('.tecnologia', {
-    rotate: {x:0, y:100, z:200},
+    rotate: {x:0, y:80, z:50},
     duration: 2500
 });
 sr.reveal('.texto2', {

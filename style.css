@@ -48,11 +48,12 @@ img.icone{
     margin-left: 3vw;
     text-align: center;
     transition: all 1s;
+    opacity: 0.5;
 }
 img.icone:hover{
     transition: all 0.6s;
-    opacity: 0.7;
-    margin-top: 100px;
+    opacity: 1;
+    
 }
 
 
