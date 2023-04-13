@@ -396,7 +396,7 @@ footer{
         height: 100px;
     }
     h1{
-        font-size: 20pt;
+        font-size: 18pt;
     }
     h2{
         font-size: 15pt;
@@ -486,6 +486,48 @@ footer{
         
     }
     
+
+    /* ------------------------ANIMAÇÃO MARIO----------------------------*/
+
+    .animacao{
+        position: absolute;
+        height: 40px;
+        width: 98%;
+    }
+    .pipe{
+        
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+
+    }
+    .mario{
+        width: 40px;
+        position: absolute;
+        bottom: 0;
+        animation: mario 8s infinite linear;
+    }
+
+    @keyframes mario{
+        0%{
+            left: 0;
+            opacity: 0;
+        }
+        5%{
+            opacity: 1;
+        }
+        95%{
+            opacity: 1;
+        }
+        100%{
+            left: 93%;
+            opacity: 0;
+        }
+    }
+
+    /* -------------------------------*/
+
+
 
     /* ESPAÇO PARA TEXTO E CURRÍCULO */
 .texto2{
@@ -645,5 +687,29 @@ footer{
         background-color: black;
         color: white;
         transition: 1s;
+    }
+}
+@media screen and (max-width: 412px){
+    #apresentacao{
+        height: 250px;
+    }
+    
+    #nometitulo{
+        font-size: 30pt;
+    }
+    h2{
+        font-size: 15pt;
+    }
+    .conhecimentos{
+        height: 450px;
+    }
+    .espaco_tecnologia{
+        display: block;
+    }
+    .tecnologia{
+        position: relative;
+        margin: 1px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
