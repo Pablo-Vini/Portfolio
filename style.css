@@ -231,12 +231,12 @@ img.icone:hover{
 }
 
 /*
-        **************************
-        *                        *
-        * ESPAÇO PARA OS PROJETOS*
-        *                        *
-        **************************
-*/
+        *****************************************************************************************
+        *****************************************************************************************
+        *                             ESPAÇO PARA OS PROJETOS                                   *
+        *****************************************************************************************
+        *****************************************************************************************
+
 
 #projetos{
     margin-top: 800px;
@@ -284,7 +284,61 @@ img.icone:hover{
     margin-right: 20px;
     width: 28%;
     text-align: center;
+}*/
+
+#projetos{
+    position: relative;
+    display:flex;
+    margin-top: 800px;
+    height: 900px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
 }
+#projetos .projeto{
+    max-width: 90vh;
+    height: 220px;
+    position: relative;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    background: #fff;
+    border-radius: 10px;
+    flex-direction: column;
+    transition: 0.5s ease-in-out;
+}
+#projetos .projeto:hover{
+    height: 500px;
+}
+
+#projetos .projeto .image{
+    position: relative;
+    width: 270px;
+    height: 270px;
+    top: -60px;
+    left: 20px;
+    z-index: 2;
+}
+
+#projetos .projeto .image img{
+    max-width: 100%;
+}
+
+#projetos .projeto .texto{
+    position: relative;
+    margin-top: -140px;
+    text-align: center;
+    padding: 10px;
+    color: green;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+
+
+
+
+
 /*
 *************************************************
                     FORMULÁRIO                  *
@@ -572,11 +626,10 @@ footer{
 }
 
 /*
-        **************************
-        *                        *
-        * ESPAÇO PARA OS PROJETOS*
-        *                        *
-        **************************
+        *********************************************************************************
+        *********************************************************************************
+        * *********************    ESPAÇO PARA OS PROJETOS    ***************************
+        *********************************************************************************
 */
 
 #projetos{
@@ -635,6 +688,13 @@ footer{
         margin-top: 50px;
         font-size: 9pt;
     }
+
+
+
+
+
+
+
 
 
 /******************************* FORMULÁRIO ********************************/
