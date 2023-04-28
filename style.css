@@ -286,54 +286,66 @@ img.icone:hover{
     text-align: center;
 }*/
 
-#projetos{
+.projetos{
     position: relative;
     display:flex;
     margin-top: 800px;
     height: 900px;
+    width: 100%;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 30px;
     flex-wrap: wrap;
 }
-#projetos .projeto{
-    max-width: 90vh;
+.projetos .projeto{
+    width: 450px;
     height: 220px;
     position: relative;
     margin: 30px 10px;
     padding: 20px 15px;
-    background: #fff;
+    background: #dddddd;
     border-radius: 10px;
     flex-direction: column;
     transition: 0.5s ease-in-out;
 }
-#projetos .projeto:hover{
+.projetos .projeto:hover{
     height: 500px;
 }
 
-#projetos .projeto .image{
+.projetos .projeto .image{
     position: relative;
-    width: 270px;
-    height: 270px;
+
     top: -60px;
     left: 20px;
-    z-index: 2;
+    z-index: 1;
 }
 
-#projetos .projeto .image img{
+.projetos .projeto .image img{
     max-width: 100%;
+    border-radius: 10px;
+    width: 370px;
+    height: 270px;
 }
 
-#projetos .projeto .texto{
+.projetos .projeto .descricao{
     position: relative;
-    margin-top: -140px;
+    margin-top: -30px;
     text-align: center;
     padding: 10px;
-    color: green;
+    color: black;
     visibility: hidden;
     transition: 0.3s ease-in-out;
+    font-size: 15pt;
 }
-
+h3{
+    font-size: 19pt;
+    
+}
+.projetos .projeto:hover .descricao{
+    visibility: visible;
+    transition-delay: 0.3s;
+    cursor: pointer;
+}
 
 
 
