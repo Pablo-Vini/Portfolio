@@ -1,28 +1,35 @@
 body{
-    border: 2px solid;
+    background-color: rgb(0, 0, 0);
     display: flex;
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
-.container{
-    background-color:rgb(248, 244, 0)  ;
-    border: 1px solid black;
-    display: flex;
+.linha{
+    height: 100vh;
     width: 100vh;
-    flex: 2;
-    flex-direction: column;
 }
-.item1{
-    background-color:rgb(15, 0, 231) ;
-    border: 1px solid black;
-    flex: 1;
+.coluna{
+    width: 100%;
+    height: 15%;   
+    transition: 10s;
 }
-.item2{
-    background-color:rgb(0, 235, 117)  ;
-    border: 1px solid black;
-    flex: 1;
+.coluna:hover{
+    transition: 0.5s;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 10px 100px white;
 }
-.item3{
-    background-color:rgb(245, 0, 0)  ;
-    border: 1px solid black;
-    flex: 1;
+
+h1{
+    color: white;
+    font-size: 100pt;
+    position: absolute;
+}
+
+.foto{
+    position: absolute;
+    margin-left: 65%;
+    margin-top: 3%;
+    width: 25%;
+    
 }
