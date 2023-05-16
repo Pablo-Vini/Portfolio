@@ -17,19 +17,11 @@ body{
 .coluna:hover{
     transition: 0.5s;
     background-color: rgb(255, 255, 255);
-    box-shadow: 1px 10px 100px white;
+    box-shadow: 10px 10px 200px 30px white;
 }
 
 h1{
     color: white;
     font-size: 100pt;
     position: absolute;
-}
-
-.foto{
-    position: absolute;
-    margin-left: 65%;
-    margin-top: 3%;
-    width: 25%;
-    
 }
