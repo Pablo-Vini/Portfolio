@@ -17,6 +17,10 @@
     </style>
 </head>
 <body>
+    <!---- #################################### CORPO  ####################################################
+        ###################################################################################################
+    --->
+
     <h1>Olá Mundo</h1>
     <div class="teste"></div>
 
@@ -26,7 +30,18 @@
         const element = document.querySelector("h1")
         const elementdiv = document.querySelector("body")
 
-        elementdiv.style.backgroundColor = "blue"
+        elementdiv.style.backgroundColor = "white"
+
+
+        const div = document.createElement("div")
+        div.innerText = "Olá Devs com Html gerado no JS"
+
+        const body = document.querySelector("body")
+
+        body.append(div)
+
+
+
     </script>
 </body>
 </html>
