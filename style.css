@@ -96,7 +96,7 @@ img.icone:hover{
         opacity: 1;
     }
     100%{
-        left: 95%;
+        left: 94%;
         opacity: 0;
     }
 }
@@ -242,7 +242,7 @@ img.icone:hover{
     margin-top: 0;
     height: 800px;
     width: 100%;
-    justify-content: center;
+    justify-content:space-between;
     align-items: center;
     padding: 30px;
     flex-wrap: wrap;
