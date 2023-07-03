@@ -132,6 +132,7 @@ img.icone:hover{
 */
 
 .conhecimentos{
+    position: relative;
     width: 100%;
     height: 700px;
     text-align: center;
@@ -148,15 +149,16 @@ img.icone:hover{
 
 .espaco_tecnologia{
     display: flex;
+    justify-content: space-between;
 }
 
 .tecnologia{
     position: relative;
     display: block;
     color: white;
-    height: 150px;
-    width: 200px;
-    margin-top: 200px;
+    height: 100%;
+    width: 100%;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -164,7 +166,7 @@ img.icone:hover{
 .img_tec{
     height: 100px;
     position: relative;
-    
+    margin-top: 80px;
 }
 .leg_tec{
     font-size: 18pt;
@@ -454,10 +456,11 @@ footer{
 
 
     /*
-    ********************************** CONHECIMETOS ************************************
+    ********************************** CONHECIMENTOS ************************************
     */
 
     .conhecimentos{
+        
         position: relative;
         width: 100%;
         margin-top: 40px;
