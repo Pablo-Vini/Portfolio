@@ -4,7 +4,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-    font-family: "Verdana", sans-serif;
+    font-family: "Monaco", sans-serif;
     font: inherit;
     text-decoration: none;
 }
@@ -119,7 +119,7 @@ img.icone:hover{
     width: 40%;
     margin-left: 15vw;
     margin-top: 200px;
-    font-size: 24pt;
+    font-size: 22pt;
 }
 
 
