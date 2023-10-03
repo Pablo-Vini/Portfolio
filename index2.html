@@ -9,9 +9,16 @@
 <body>
 
     <header class="hidden" class="apresentacao">
+        <h1 class="nome">Pablo Vinícius</h1>
+        <h2 class="dev">Developer</h2>
+        <div class="links">
+            <a class="link" href="#"><img src="img/apresentação/github.png" alt=""></a>
+            <a class="link" href="#"><img src="img/apresentação/linkedin.png" alt=""></a>
+            <a class="link" href="#"><img src="img/apresentação/instagram2.png" alt=""></a>
+        </div>
         <div class="caixa">
             <div class="conteudo">
-                <img src="img/apresentação/eu4.jpg" alt="">
+                <img src="img/apresentação/eu1.jpg" alt="">
                 <h2>Pablo Vinícius<br><span>Dev Full Stack Spring com Angular</span></h2>
                 <a href="#">Contrate</a>
             </div>
@@ -20,11 +27,12 @@
 
 
     <section class="hidden">
-        <h1>Section 1</h1>
+        <h1>CONHECIMENTOS</h1>
 
     </section>
     <section class="hidden" class="section3">
-        <h1>Section 3</h1>
+        <h1 class="tituloProjetos">PROJETOS</h1>
+        
         <div class="container">
             <div class="card">
                 <div class="content">
@@ -70,5 +78,14 @@
     </section>
     
 </body>
+<script type="text/javascript" src="vanilla-tilt.js"></script>
 <script src="script2.js"></script>
+<script>
+    VanillaTilt.init(document.querySelectorAll(".card"), {
+		max: 25,
+		speed: 400,
+        glare: true,
+        "max-glare": 1,
+	});
+</script>
 </html>

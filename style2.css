@@ -16,15 +16,15 @@ body{
 */
 
 section{
-    display: grid;
+    display: flex;
+    justify-content: center;
     min-height: 100vh;
-    border: solid 1px yellow;
 }
 
 header{
-    display: grid;
+    display: flex;
+    justify-content: center;
     min-height: 100vh;
-    border: solid 1px yellow;
 }
 
 .hidden{
@@ -53,18 +53,19 @@ header{
 */
 .caixa{
     margin-top: 5%;
-    position: relative;
-    width: 400px;
-    height: 400px;
+    position: absolute;
+    width: 60vh;
+    height: 60vh;
     background: #1b1b1b;
     border-radius: 50%;
     overflow: hidden;
+    left: 10vh;
 }
 
 .caixa::before{
     content: '';
     position: absolute;
-    background: linear-gradient(315deg, #fbff00, #00e1ff);
+    background: linear-gradient(315deg, #fbff00, #008192);
     inset: -10px 140px;
     animation: animar 4s linear infinite;
     transition: 1s;
@@ -87,15 +88,15 @@ header{
     content: '';
     position: absolute;
     inset: 6px;
-    background: #8f8f8f;
+    background: #8a8a8a;
     border-radius: 50%;
     z-index: 1;
 }
 
 .conteudo{
     position: absolute;
-    inset: 30px;
-    border: 6px solid #1b1b1b; 
+    inset: 20px;
+    border: 6px solid #000000; 
     z-index: 2;
     border-radius: 50%;
     overflow: hidden;
@@ -130,6 +131,7 @@ header{
     font-weight: 600;
     letter-spacing: .05em;
     text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .conteudo h2 span {
@@ -159,6 +161,37 @@ header{
     letter-spacing: .2em;
 }
 
+/* =========================================================================================
+============================== APRESENTAÇÃO DO HEADER  =====================================
+============================================================================================
+*/
+.nome{
+    position: absolute;
+    font-size: 15vh;
+    right: 15vh;
+    margin-top: 10vh;
+}
+.dev{
+    position: absolute;
+    font-size: 10vh;
+    right: 60vh;
+    margin-top: 25vh;
+    color: #b9b9b9;
+}
+
+.links{
+    position: absolute;
+    margin-top: 50vh;
+}
+
+.link img{
+    opacity: 0.5;
+    width: 80px;
+    transition: 1s;
+}
+.link img:hover{
+    opacity: 1;
+}
 
 /* =========================================================================================
 ============================ ANIMAÇÃO DAS TECNOLOGIAS  =====================================
@@ -193,7 +226,12 @@ header{
 
 */
 
+/*|||||||||||||||||||||||||||| TITULO PROJETOS ||||||||||||||||||||||||||||||||*/
 
+.tituloProjetos{
+    position: absolute;
+    font-size: 7em;
+}
 
 /* =========================================================================================
 ============================ ANIMAÇÃO DOS CARDS  ===========================================
@@ -206,7 +244,7 @@ header{
     display: flex;
     gap: 20px;
     justify-content: center;
-    max-width: 1200px;
+    margin-top: 80px;
     flex-wrap: wrap;
     z-index: 1;
 }
@@ -217,6 +255,7 @@ header{
     margin: 30px;
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
     background: rgba(255, 255, 255, 0.1);
+    /*background-image: url(img/projetos/crud_spring.png);*/
     border-radius: 15px;
     overflow: hidden;
     display: flex;
@@ -230,10 +269,46 @@ header{
 .container .card .content{
     padding: 20px;
     text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
     transition: 0.5s;
 }
 
+
+.container .card:hover .content{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+
 .container .card .content h2{
     position: absolute;
-    top: ;
+    top: -80px;
+    right: 30px;
+    font-size: 8em;
+    color: rgba(61, 61, 61, 0.5);
+    pointer-events: none;
+}
+
+.container .card .content h3{
+    font-size: 1.8em;
+    z-index: 1;
+}
+
+.container .card .content p{
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.container .card .content a{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background: #fff;
+    color: #000;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
