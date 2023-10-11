@@ -46,7 +46,6 @@ header{
 }
 
 
-
 /* =========================================================================================
 ============================ IMAGEM DE CAPA COM ANIMAÇÃO ===================================
 ============================================================================================
@@ -192,7 +191,7 @@ header{
 
 .link img{
     opacity: 0.5;
-    width: 10vh;
+    width: 8vh;
     transition: 1s;
     
 }
@@ -241,27 +240,76 @@ header{
 .tituloConhecimentos{
     font-size: 4em;
     position: absolute;
+    margin-top: 40px;
 }
 
 .conhecimentos{
     display: flex;
     justify-content: center;
+    background-color: #272727;
+    width: 100%;
 }
 
 .conhecimento{
-    padding: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 15%;
-    background-color: #222222;
-    box-shadow: 2px 2px 10px rgb(63, 63, 63);
-    margin: 30vh 2%;
-    width: 9vw;
+    background-color: #272727;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+    margin: 30vh 1%;
+    width: 8vw;
     height: 8vw;
     transition: 0.5s;
 }
 .conhecimento:hover{
-    background-color: #000000;
+    background-color: #3b3b3b;
+    margin: 29vh 1%;
 }
 
+.imgconhecimento{
+    padding: 5px;
+    position: relative;
+    width: 5vw;
+    height: 5vw;
+}
+legend{
+    position: absolute;
+    margin-top: 6vw;
+}
+
+.estudando{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin-top: 350px;
+    height: 50vh;
+    width: 100%;
+}
+
+.estudoconhecimento{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15%;
+    background-color: #272727;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+    width: 8vw;
+    height: 8vw;
+    transition: 0.5s;
+    margin: 80px 2%;
+}
+.estudoconhecimento:hover{
+    background-color: #3b3b3b;
+    margin: 76px 2%;
+}
+.tituloestudando{
+    position: absolute;
+    font-size: 3em;
+
+}
 /*|||||||||||||||||||||||||||| TITULO PROJETOS ||||||||||||||||||||||||||||||||*/
 
 .tituloProjetos{
