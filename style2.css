@@ -102,9 +102,10 @@ header{
 */
 
 .sobremim{
-    width: 70vh;
-    font-size: 2em;
-    margin-top: 40vh;
+    width: 80vh;
+    height: 60vh;
+    font-size: 5vh;
+    margin-top: 30vh;
 }
 .espaco_curriculo{
     margin-top: 30vh;
@@ -112,7 +113,7 @@ header{
     text-align: center;
     width: 40vh;
     height: 50vh;
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 .curriculo{
@@ -320,13 +321,25 @@ legend{
 */
 
 form{
-    background-color: #3b3b3b;
-    width: 60vw;
+    background-color: #272727;
+    width: 50vw;
     height: 70vh;
     display: flex;
     justify-content: center;
+    padding-top: 40px;
+    border-radius: 25px;
 }
-
+.tituloFormulario{
+    position: absolute;
+    font-size: 3em;
+}
+label{
+    margin: 15vh 3vh;
+}
+#textarea{
+    position: absolute;
+    margin-top: 27vh;
+}
 
 /* =========================================================================================
 ======================================== RODAPÉ  ===========================================
