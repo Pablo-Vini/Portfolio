@@ -1,28 +1,27 @@
+const myObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show')
+        }else{
+            entry.target.classList.remove('show')
+        }
+    })
+})
+
+const elements = document.querySelectorAll('.hidden')
+
+
+elements.forEach((element) => myObserver.observe(element))
+
+
 
 function Enviar(){
     var nome = document.getElementById("nomeid")
     var fone = document.getElementById("foneid")
-    var email = document.getElementById("emailid")
     var msg = document.getElementById("msgid")
 
     if(nome.value != ""){
-        alert("Obrigado " + nome.value + ", seus dados foram encaminhados com sucesso.")
+        alert("Obrigado " + nome.value + ", sua mensagem foi encaminhada com sucesso.")
         window.location.reload(true)
     }
 }
-
-
-window.sr = ScrollReveal({reset: true});
-
-sr.reveal('.texto', {duration: 3000});
-sr.reveal('.titulo_conhecimento', {
-    rotate: {x:100, y:0, z:0},
-    duration: 2000
-});
-sr.reveal('.tecnologia', {
-    rotate: {x:0, y:80, z:50},
-    duration: 2500
-});
-sr.reveal('.texto2', {
-    duration: 2500
-});

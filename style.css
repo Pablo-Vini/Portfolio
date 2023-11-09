@@ -1,780 +1,373 @@
-/* ESTILO DO CORPO */
-@charset "UTF-8";
 *{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-    font-family: "Monaco", sans-serif;
-    font: inherit;
-    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-a{
-    color: rgb(160, 159, 255);
-}
-
-/* APRESENTAÇÃO DE CABEÇALHO */
-
-div#apresentacao{
-    display:flex;
-    border: 2px solid rgb(0, 0, 0);
-    background-color: rgb(3, 4, 17);
-    
-}
-#nome{
-    width: 550px;
-    height: 200px;
-    
-}
-#nometitulo{
-    font-size: 50pt;
-    padding-top: 3vw;
-    margin-left: 10px;
-    color: white;
-}
-h2{
-    font-size: 25pt;
-    margin-left: 10px;
-    margin-bottom: 10px;
-    color: white;
+    min-height: 100vh;
+    background: #000000;
+    color: #fff;
 }
 
-img.icone{
-    margin-top: 120px;
-    height: 60px;
-    margin-left: 3vw;
-    text-align: center;
-    transition: all 1s;
-    opacity: 0.5;
-}
-img.icone:hover{
-    transition: all 0.6s;
-    opacity: 1;
-    
-}
-
-
-/* APRESENTAÇÃO PRINCIPAL */
-
-.espaco{
-    display: block;
-    position: relative;
-}
-
-/* -------ANIMAÇÃO MARIO----------*/
-.animacao{
-    position: absolute;
-    height: 200px;
-    width: 100%;
-}
-.pipe{
-    width: 60px;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-
-}
-.mario{
-    width: 70px;
-    position: absolute;
-    bottom: 0;
-    animation: mario 8s infinite linear;
-}
-
-@keyframes mario{
-    0%{
-        left: 0;
-        opacity: 0;
-    }
-    5%{
-        opacity: 1;
-    }
-    95%{
-        opacity: 1;
-    }
-    100%{
-        left: 94%;
-        opacity: 0;
-    }
-}
-
-/* -------------------------------*/
-
-#fotoeu{
-    position: relative;
-    float: right;
-    margin-top: 40px;
-    margin-right: 10%;
-    border-radius: 1vw;
-    height: 400px;    
-    box-shadow: 5px 10px 10px rgb(0, 0, 0);
-}
-
-.texto{
-    position: relative;
-    text-align:left;
-    width: 40%;
-    margin-left: 15vw;
-    margin-top: 200px;
-    font-size: 22pt;
-}
-
-
-
-
-/* 
-        ***********************************************
-************* ÁREA DE CONHECIMENTOS DE LINGUAGENS **************
-        ***********************************************
+/* =========================================================================================
+===================================== ANIMAÇÃO NO SCROLL ===================================
+============================================================================================
 */
+
+section{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.hidden{
+    opacity: 0;
+    filter: blur(15px);
+    transition: all 2.5s;
+    transform: translateX(-100%);
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transition: all 2.5s;
+    transform: translateX(0);
+}
+
+.apresentacao{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* =========================================================================================
+============================== APRESENTAÇÃO DO HEADER  =====================================
+============================================================================================
+*/
+.eu{
+    position:absolute;
+    opacity: 0.7;
+    left: 0;
+    width: 50%;
+}
+
+.hidden{
+    height: 110vh;
+}
+
+.nome{
+    position: absolute;
+    font-size: 15vh;
+    right: 10vh;
+    margin-top: 25vh;
+}
+.dev{
+    position: absolute;
+    font-size: 10vh;
+    right: 10vh;
+    margin-top: 40vh;
+    color: #b9b9b9;
+}
+
+.links{
+    position: absolute;
+    margin-top: 70vh;
+    right: 100px;
+}
+
+.link img{
+    opacity: 0.5;
+    width: 8vh;
+    transition: 1s;
+    
+}
+.link img:hover{
+    opacity: 1;
+}
+
+/* =========================================================================================
+============================ ESPAÇO SOBRE MIM E CURRICULO===================================
+============================================================================================
+*/
+
+.sobremim{
+    width: 80vh;
+    height: 60vh;
+    font-size: 5vh;
+    margin-top: 30vh;
+}
+.espaco_curriculo{
+    margin-top: 30vh;
+    margin-left: 20vh;
+    text-align: center;
+    width: 40vh;
+    height: 50vh;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.curriculo{
+    margin-top: 10px;
+    width: 40vh;
+    height: 40vh;
+    transition: 0.5s;
+}
+.curriculo:hover{
+    margin-top: 0;
+    opacity: 0.3;
+}
+.legendacurriculo{
+    margin-top: -20vh;
+    font-size: 17pt;
+}
+
+
+
+
+/* =========================================================================================
+================================= CONHECIMENTOS  ===========================================
+============================================================================================
+*/
+
+.tituloConhecimentos{
+    font-size: 4em;
+    position: absolute;
+    margin-top: 40px;
+}
 
 .conhecimentos{
-    position: relative;
-    width: 100%;
-    height: 700px;
-    text-align: center;
-    display: block;
-    background-color: rgb(0, 0, 0);
-}
-
-.titulo_conhecimento{
-    font-size: 32pt;
-    margin-top: 200px;
-    position: relative;
-    color: rgb(255, 255, 255);
-}
-
-.espaco_tecnologia{
     display: flex;
-    justify-content: space-between;
-}
-
-.tecnologia{
-    position: relative;
-    display: block;
-    color: white;
-    height: 100%;
+    justify-content: center;
+    background-color: #272727;
     width: 100%;
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-.img_tec{
-    height: 100px;
+.conhecimento{
     position: relative;
-    margin-top: 80px;
-}
-.leg_tec{
-    font-size: 18pt;
-    font-size: arial;
-}
-
-
-#legenda{
     display: flex;
-    justify-content: space-between;
-    height: 15%;
-    
+    justify-content: center;
+    align-items: center;
+    border-radius: 15%;
+    background-color: #272727;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+    margin: 30vh 1%;
+    width: 8vw;
+    height: 8vw;
+    transition: 0.5s;
+}
+.conhecimento:hover{
+    background-color: #3b3b3b;
+    margin: 29vh 1%;
 }
 
-/* ESPAÇO PARA TEXTO E CURRÍCULO */
-.texto2{
+.imgconhecimento{
+    padding: 5px;
+    position: relative;
+    width: 5vw;
+    height: 5vw;
+}
+legend{
     position: absolute;
-    text-align:left;
-    width: 40%;
-    margin-left: 10%;
-    margin-top: 200px;
-    font-size: 24pt;
+    margin-top: 6vw;
 }
-#curriculo{
-    height: 640px;
-    width: 50%;
-    margin-top: 20px;
-    position: relative;
-    float: right;
+
+.estudando{
+    position: absolute;
     display: flex;
-    align-items: center;
-    text-align: center;
-    /*margin-right: 20%;*/
-    border-radius: 100% 0% 0% 0%;
-    background-color: rgb(0, 0, 0);
-    transition: 1s;
-}
-
-.img_opcao{
-    height: 150px;
-}
-
-
-.a_opcao{
-    position: relative;
-    height: 200px;
-    margin: 50px auto 0px auto;
-    text-align: center;
-    transition: 0.5s;
-    color: black;
-}
-.a_opcao:hover{
-    margin: 20px auto 0px auto;
-    transition: 0.5s;
-    opacity: 90%;
-    color: white;
-}
-
-/*
-        *****************************************************************************************
-        *****************************************************************************************
-        *                             ESPAÇO PARA OS PROJETOS                                   *
-        *****************************************************************************************
-        *****************************************************************************************
-*/
-
-#titulo_projetos{
-    font-size: 32pt;
-    margin-top: 900px;
-    text-align: center;
-}
-.projetos{
-    position: relative;
-    display:flex;
-    margin-top: 0;
-    height: 800px;
+    justify-content: center;
+    height: 50vh;
     width: 100%;
-    justify-content:space-between;
+    bottom: 0;
+}
+
+.estudoconhecimento{
+    position: relative;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    padding: 30px;
-    flex-wrap: wrap;
+    border-radius: 15%;
+    background-color: #272727;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+    width: 8vw;
+    height: 8vw;
+    transition: 0.5s;
+    margin: 80px 2%;
 }
-.projetos .projeto{
-    width: 400px;
-    height: 220px;
-    position: relative;
-    margin: 30px 10px;
-    padding: 20px 15px;
-    background: #000000;
-    border-radius: 10px;
-    flex-direction: column;
-    transition: 0.5s ease-in-out;
+.estudoconhecimento:hover{
+    background-color: #3b3b3b;
+    margin: 76px 2%;
 }
-.projetos .projeto:hover{
-    height: 500px;
-}
+.tituloestudando{
+    position: absolute;
+    font-size: 3em;
 
-.projetos .projeto .image{
-    position: relative;
+}
+/*|||||||||||||||||||||||||||| TITULO PROJETOS ||||||||||||||||||||||||||||||||*/
 
-    top: -60px;
-    left: 20px;
-    z-index: 1;
+.tituloProjetos{
+    position: absolute;
+    font-size: 5em;
 }
 
-.projetos .projeto .image img{
-    max-width: 100%;
-    border-radius: 10px;
-    width: 330px;
-    height: 270px;
-}
-
-.projetos .projeto .descricao{
-    position: relative;
-    margin-top: -30px;
-    text-align: center;
-    padding: 10px;
-    color: rgb(255, 255, 255);
-    visibility: hidden;
-    transition: 0.3s ease-in-out;
-    font-size: 15pt;
-}
-h3{
-    font-size: 19pt;
-    
-}
-.projetos .projeto:hover .descricao{
-    visibility: visible;
-    transition-delay: 0.3s;
-    cursor: pointer;
-}
-
-
-
-
-
-/*
-*************************************************
-                    FORMULÁRIO                  *
-*************************************************
+/* =========================================================================================
+============================ ANIMAÇÃO DOS CARDS  ===========================================
+============================================================================================
 */
-form{
-    height: 600px;
-    width: 800px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-    box-shadow: 2px 5px 10px black;
-    border-radius: 5%;
-    text-align: center;
+
+
+.container{
+    width: 100%;
+    position: relative;
+    display: flex;
+    gap: 20px;
+    justify-content:space-between;
+    margin-top: 80px;
+    flex-wrap: wrap;
+    z-index: 1;
+    padding: 10vh;
+}
+.container .card{
+    position: relative;
+    width: 34vh;
+    height: 54vh;
+    margin: 2vh;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
 }
 
-#title_form{
-    color: rgb(0, 0, 0);
-    text-shadow: 1px 1px 2px rgb(77, 77, 77);
-    font-size: 28pt;
-    height: 70px;
+.container .card .content{
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.container .card:hover .content{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.imgcard{
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    width: 160%;
+    transition: 0.5s;
+}
+.imgcard:hover{
+    opacity: 0;
+}
+
+.linkcard{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container .card .content h2{
+    position: absolute;
+    top: -80px;
+    right: 30px;
+    font-size: 8em;
+    /*color: rgba(61, 61, 61, 0.5);*/
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.container .card .content h3{
+    font-size: 1.8em;
+    z-index: 3;
+}
+
+.container .card .content p{
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.container .card .content a{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background: #fff;
+    color: #000;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================================================================================
+==================================== FORMULÁRIO  ===========================================
+============================================================================================
+*/
+
+form{
+    background-color: #272727;
+    width: 50vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    padding: 10vh;
+    border-radius: 25px;
+    border: solid 1px rgb(114, 114, 114);
+}
+
+.tituloFormulario{
+    position: absolute;
+    font-size: 3em;
 }
 label{
-    display: flex;
-    height: 50px;
-    margin: 20px;
-    justify-content: center;
-    
+    margin: 15vh 3vh;
 }
-.labelEs{
-    display: block;
-}
-input{
-    width: 40%;
-    height: 30px;
-    box-shadow: 0px 1px 10px black;
-    text-align: center;
-    border-radius: 7px;
-    border: white;
-}
-textarea{
-    width: 50%;
-    border-radius: 7px;
-    box-shadow: 0px 3px 10px black;
+#textarea{
+    position: absolute;
+    margin-top: 27vh;
+    border-radius: 10px;
 }
 
 .enviar{
-    display: block;
-    box-shadow: 0px 3px 10px black;
-    width: 80px;
-    height: 40px;
+    position: absolute;
+    bottom: 42vh;
+    width: 10vh;
+    height: 5vh;
+    border-radius: 15px;
     transition: 0.5s;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 15%;
+    border: solid 2px rgb(0, 0, 0);
 }
 .enviar:hover{
-    background-color: black;
+    background-color: #000;
+    border: solid 2px rgb(255, 255, 255);
     color: white;
-    transition: 0.5s;
 }
-
-/*
-************* RODAPÉ *************
+/* =========================================================================================
+======================================== RODAPÉ  ===========================================
+============================================================================================
 */
+
 footer{
-    margin-top: 70px;
-    color: rgb(231, 246, 255);
-    position: absolute;
-    margin-bottom: 0;
-    height: 150px;
-    width: 100%;
-    background-color: rgb(0, 0, 0);
-}
-
-#rodape{
-    text-align: center;
-    margin-top: 50px;
-}
-
-/*|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-                                Efeito de Rotação
-||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
-
-.texto, .titulo_conhecimento, .tecnologia, .texto2{
-    visibility: hidden;
-}
-
-
-
-
-
-/* 
-  =====================================================================
-||                                                                     ||
-||              RESPONSIVIDADE A DIFERENTES TAMANHOS DE TELA           ||
-||                                                                     ||
-  =====================================================================
-*/
-
-
-@media screen and (max-width: 800px){
-    body{
-        width: 100%;
-        
-    }
-
-    #apresentacao{
-        display: block;
-        text-align: center;
-        
-    }
-    #nome{
-        position: absolute;
-        width: 100%;
-        height: 100px;
-    }
-    h1{
-        font-size: 18pt;
-    }
-    h2{
-        font-size: 15pt;
-    }
-
-    img.icone{
-        margin-top: 120px;
-        height: 45px;
-        margin-left: 3vw;
-        opacity: 1;
-        text-align: center;
-        transition: all 1s;
-    }
-
-    #fotoeu{
-        height: 300px;
-        margin: 50px auto 10px auto;
-    }
-    .espaco{
-        display:grid;
-        width: 100%;
-        
-    }
-    .texto{
-        text-align:justify;
-        width: 80%;
-        margin-top: 20px;
-        font-size: 15pt;
-    }
-
-
-    /*
-    ********************************** CONHECIMENTOS ************************************
-    */
-
-    .conhecimentos{
-        
-        position: relative;
-        width: 100%;
-        margin-top: 40px;
-        text-align: center;
-        display: block;
-        height: 500px;
-    }
-    
-    .titulo_conhecimento{
-        font-size: 17pt;
-        position: relative;
-        margin-top: 30px;
-        margin-bottom: 10px;
-        width: 100%;
-        height: 80px;
-    }
-
-    .espaco_tecnologia{
-        display: flex;
-        justify-content:space-between;
-        position: relative;
-        align-items: center;
-        width: 100%;
-        height: 50%;
-    }
-    
-    
-    .tecnologia{
-        text-align: center;
-        position:relative;
-        height: auto;
-        width: 60px;
-        float: left;
-        margin-top: 0px;
-        transition: 1s;
-    }
-    
-    .img_tec{
-        height: 30px;
-    }
-    .leg_tec{
-        font-size: 10pt;
-        font-size: arial;
-    }
-    
-    #legenda{
-        display: flex;
-        justify-content: space-between;
-        height: 15%;
-        
-    }
-    
-
-    /* ------------------------ANIMAÇÃO MARIO----------------------------*/
-
-    .animacao{
-        position: absolute;
-        height: 40px;
-        width: 98%;
-    }
-    .pipe{
-        
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-
-    }
-    .mario{
-        width: 40px;
-        position: absolute;
-        bottom: 0;
-        animation: mario 8s infinite linear;
-    }
-
-    @keyframes mario{
-        0%{
-            left: 0;
-            opacity: 0;
-        }
-        5%{
-            opacity: 1;
-        }
-        95%{
-            opacity: 1;
-        }
-        100%{
-            left: 93%;
-            opacity: 0;
-        }
-    }
-
-    /* -------------------------------*/
-
-
-
-    /* ESPAÇO PARA TEXTO E CURRÍCULO */
-.texto2{
-    position: relative;
-    text-align:center;
-    width: 80%;
-    margin-top: 200px;
-    font-size: 15pt;
-    font-family: Arial sans-serif;
-}
-#curriculo{
-    
-    height: 400px;
-    width: 100%;
-    margin-top: 20px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    border-radius: 100% 0% 0% 0%;
-    background-color: rgb(0, 0, 0);
-}
-
-.img_opcao{
     height: 100px;
-}
-
-
-.a_opcao{
-    position: relative;
-    height: 200px;
-    margin: 50px auto 0px auto;
-    text-align: center;
-    transition: 0.5s;
-    color: rgb(255, 255, 255);
-}
-.a_opcao:hover{
-    margin: 50px auto 0px auto;
-    transition: 0.5s;
-    opacity: 80%;
-    color: white;
-}
-
-/*
-        *********************************************************************************
-        *********************************************************************************
-        * *********************    ESPAÇO PARA OS PROJETOS    ***************************
-        *********************************************************************************
-*/
-
-#titulo_projetos{
-    font-size: 26pt;
-    margin-top: 600px;
-    text-align: center;
-}
-.projetos{
-    position: relative;
-    display:flex;
-    margin-top: 0;
-    height: 1500px;
-    width: 100%;
+    background-color: #1b1b1b;
+    display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 30px;
-    flex-wrap: wrap;
 }
-/*
-.projetos .projeto{
-    width: 250px;
-    height: 20px;
-    position: relative;
-    margin: 30px 10px;
-    padding: 20px 15px;
-    background: #eeeeee;
-    border-radius: 10px;
-    flex-direction: column;
-    transition: 0.5s ease-in-out;
-}*/
-.projetos .projeto{
-    height: 400px;
-    width: 90%;
-}
-
-.projetos .projeto .image{
-    position: relative;
-    top: -60px;
-    left: auto;
-    z-index: 1;
-    padding-left: 15%;
-    padding-right: 15%;
-}
-
-.projetos .projeto .image img{
-    max-width: 100%;
-    border-radius: 10px;
-    width: 270px;
-    height: 170px;
-}
-/*
-.projetos .projeto .descricao{
-    position: relative;
-    margin-top: -30px;
-    text-align: center;
-    padding: 10px;
-    color: black;
-    visibility: hidden;
-    transition: 0.3s ease-in-out;
-    font-size: 15pt;
-}*/
-h3{
-    font-size: 17pt;
-    
-}
-.projetos .projeto .descricao{
-    visibility: visible;
-    transition-delay: 0.3s;
-    cursor: pointer;
-}
-
-    
-    footer{
-        position: absolute;
-        margin-bottom: 0;
-        height: 100px;
-        width: 100%;
-        background-color: rgb(0, 0, 0);
-    }
-    
-    #rodape{
-        text-align: center;
-        margin-top: 50px;
-        font-size: 9pt;
-    }
-
-
-
-
-
-
-
-
-
-/******************************* FORMULÁRIO ********************************/
-    form{
-        height: 500px;
-        width: 80%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 50px;
-        box-shadow: 2px 5px 10px black;
-        border-radius: 5%;
-        text-align: center;
-    }
-
-    #title_form{
-        color: rgb(0, 0, 0);
-        text-shadow: 1px 1px 2px rgb(77, 77, 77);
-        font-size: 25pt;
-    }
-    label{
-        display: block;
-        height: 50px;
-        margin: 20px auto 20px auto;
-    
-    }
-    input{
-        width: 40%;
-        box-shadow: 0px 1px 5px black;
-        text-align: center;
-    }
-    textarea{
-        width: 70%;
-        height: 150px;
-        box-shadow: 0px 3px 5px black;
-    }
-
-    .enviar{
-        display: block;
-        box-shadow: 3px 3px 3px black;
-        width: 70px;
-        height: 30px;
-        transition: 1s;
-        margin-top: 20px;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 15%;
-    }
-    .enviar:hover{
-        background-color: black;
-        color: white;
-        transition: 1s;
-    }
-}
-@media screen and (max-width: 412px){
-    #apresentacao{
-        height: 250px;
-    }
-    
-    #nometitulo{
-        font-size: 30pt;
-    }
-    .texto{
-        margin-bottom: 90px;
-    }
-    .texto2{
-        text-align: justify;
-    }
-    h2{
-        font-size: 15pt;
-    }
-    .conhecimentos{
-        height: 450px;
-    }
-    .espaco_tecnologia{
-        display: flex;
-    }
-    .tecnologia{
-        position: relative;
-        margin-left: auto;
-        margin-right: auto;
-    }
+#rodape{
+    margin-top: 40px;
 }

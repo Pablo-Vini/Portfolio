@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Vinícius</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    
+    <div id="apresentacao">
+        <div id="nome">
+            <h1 id="nometitulo">Pablo Vinícius</h1>
+            <a href="index2.html"><h2>DEVELOPER</h2></a>
+        </div>
+        <a href="https://www.linkedin.com/in/pablo-gramos/" target="_blank">
+            <img class="icone" src="img/apresentação/linkedin.png" alt="Linkedin"></a>
+        
+        <a href="https://github.com/Pablo-Vini" target="_blank">
+            <img class="icone" src="img/apresentação/github.png" alt="GitHub"></a>
+        
+        <a href="https://www.instagram.com/pablo_01110000/?hl=pt-br" target="_blank">
+            <img class="icone" src="img/apresentação/instagram.png" alt="Instagram"></a>
+        
+    </div>
+    <div class="espaco">
+        <img id="fotoeu" src="img/apresentação/eu4.jpg" alt="Imagem Teste">
+    </div>
+    <div class="espaco">
+        <p class="texto">Olá, sou Pablo Vinícius. <br>Sou desenvolvedor Java Spring e me empenho a cada dia para me tornar
+            melhor nesta área que eu amo.</p>
+    </div>
+
+    <div class="animacao">
+        <img src="img/mario.gif" alt="" class="mario jump">
+    </div>
+
+    <nav class="conhecimentos">
+        <h1 class="titulo_conhecimento">CONHECIMENTOS</h1>
+        <nav class="espaco_tecnologia">
+            <div class="tecnologia" id="tec1">
+            
+                <img src="img/conhecimentos/html.png" alt="" class="img_tec">
+                <p class="leg_tec">HTML5</p>
+                
+                <img src="img/conhecimentos/java.png" alt="" class="img_tec">
+                <p class="leg_tec">JAVA</p>
+            
+            </div>
+            <div class="tecnologia">
+                
+                <img src="img/conhecimentos/css.png" alt="" class="img_tec">
+                <p class="leg_tec">CSS3</p>
+
+                <img src="img/conhecimentos/python.png" alt="" class="img_tec">
+                <p class="leg_tec">PYTHON</p>
+            </div>
+            <div class="tecnologia">
+                
+                <img src="img/conhecimentos/javascript.png" alt="" class="img_tec">
+                <p class="leg_tec">Javascript</p>
+
+                <img src="img/conhecimentos/mysql.png" alt="" class="img_tec">
+                <p class="leg_tec">MySQL</p>
+            </div>
+            <div class="tecnologia">
+                
+                <img src="img/conhecimentos/Spring.png" alt="" class="img_tec">
+                <p class="leg_tec">Spring</p>
+                
+                <img src="img/conhecimentos/git.png" alt="" class="img_tec">
+                <p class="leg_tec">Git</p>
+            </div>
+        </nav>
+        
+        
+    </nav>
+
+    <p class="texto2">Atualmente estou cursando meu último período de Ciência da Computação e sou estagiário 
+        de TI na ESMAT (Escola Superior de Magistratura) em Palmas, sempre busco colocar minhas habilidades
+         tecnicas em prática, me interesso bastante em aprender novas tecnologias tanto no Front-End
+        quanto no Back-End, abaixo estão alguns projetos mas mantenho todos os meus códigos no 
+        <a href="https://github.com/PabloGramos" target="_blank">GitHub</a>.</p>
+
+    <nav id="curriculo">    
+        <a target="_blank" class="a_opcao" href="curriculo/index.html"><img class="img_opcao"  src="img/curriculo.png" alt="Curriculo">
+            <p class="legenda">CURRICULO</p></a>
+    </nav>    
+
+    <h1 id="titulo_projetos">PROJETOS</h1>
+    
+    <nav class="projetos">
+        <a target="_blank" href="projetos/Desafio Javascript - 7 Projetos em 7 Dias (B7Web - 2021)/Projeto 01/index.html">
+        <div class="projeto">
+            <div class="image">
+                <img src="img/projetos/projeto_bateria.PNG" alt="log">
+            </div>
+            <div class="descricao">
+                <h3>Bateria</h3>
+                <p><br><br>Bateria utilizando HTML, CSS e Javascript, projeto criado com o objetivo de estudar 
+                    Javascript e aprimorar meus conhecimenstos</p>
+            </div>
+        </div>
+        </a>
+        <a target="_blank" href="https://github.com/Pablo-Vini/Reconhecimento-Facial">
+        <div class="projeto">
+            <div class="image">
+                <img src="img/projetos/projeto_face.png" alt="log">
+            </div>
+            <div class="descricao">
+                <h3>Reconhecimento de Faces</h3>
+                <p><br><br>Detecção e reconhecimento de faces com Python e OpenGL, programa reconhece a face 
+                    cadastrada e apresenta a confiabilidade de precisão</p>
+            </div>
+        </div>
+        </a>
+        <a href="https://github.com/Pablo-Vini/Projeto_CRUD_Spring">
+        <div class="projeto">
+            <div class="image">
+                <img src="img/projetos/crud_spring.png" alt="log">
+            </div>
+            <div class="descricao">
+                <h3>CRUD Spring Boot</h3>
+                <p><br><br>Projeto de CRUD com Spring Boot, criação de API RESTful na IDE STS, analizando metodos e resultados com Postman e MySQL.</p>
+            </div>
+        </div>
+        </a>
+    </nav>
+
+    <form action="https://formsubmit.co/pablovgramos@gmail.com" method="POST" name="formulario">
+        <h1 id="title_form">Entre em Contato</h1>
+        
+        <label class="labelEs" for="name">
+            Nome <br>
+            <input type="text" id="nomeid" placeholder="Seu nome" required="required" name="name">
+        </label>
+        
+        <label class="labelEs"  for="fone">
+            Telefone<br>
+            <input type="tel" id="foneid" placeholder="(xx)x xxxx-xxxx" name="fone">
+        </label>
+        
+        <label class="labelEs"  for="email">
+            Email <br>
+            <input type="email" id="emailid" placeholder="fulano@gmail.com" name="email">
+        </label>
+
+        <textarea name="massage" id="msgid" cols="30" rows="10" placeholder="Deixe sua mensagem..." required></textarea>
+        
+        <button type="submit" class="enviar" onclick="Enviar()">Enviar</button>
+        <input type="hidden" name="_subject" value="Novo Contato!">
+        <input type="text" name="_honey" style="display:none;">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://pablo-vini.github.io/Portfolio/">
+    </form>
+
+    <footer>
+        <p id="rodape">Copyright &copy; 2023 - by Pablo Vinícius</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
