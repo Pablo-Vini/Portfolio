@@ -25,3 +25,9 @@ function Enviar(){
         window.location.reload(true)
     }
 }
+
+const chk = document.getElementById('chk')
+
+chk.addEventListener('change' , () => {
+    document.body.classList.toggle('dark')
+})
