@@ -1,11 +1,7 @@
-:root{
-    --text: #000000;
-    --subtitle: #555555;
-    --background: #fff;
-    --background-items: #ffffff;
-    --background-conhecimentos:#555555; 
+html[white]{
+    background-color: #ffffff;
+    color: black;
 }
-
 
 *{
     margin: 0;
@@ -21,10 +17,6 @@ body{
     transition: background 0.2s linear;
 }
 
-body.dark{
-    background: #ffffff;
-    color: #000000;
-}
 
 /* =========================================================================================
 ===================================== ANIMAÇÃO NO SCROLL ===================================
@@ -195,10 +187,7 @@ header{
 .espaco_curriculodark{
     color: #000;
 }
-/**************************/
-form.dark{
-    color: #fff;
-}
+
 .curriculo{
     margin-top: 10px;
     width: 40vh;

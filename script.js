@@ -26,28 +26,34 @@ function Enviar(){
     }
 }
 
+// MUDANÇA DE TEMA
+
+document.addEventListener('DOMContentLoaded', () => {
+    const whiteModeStorage = localStorage.getItem('white-mode')
+    const html = document.querySelector('html')
+    const inputWhiteMode = document.getElementById('checkTema')
+
+    if (whiteModeStorage) {
+        html.setAttribute("white", "true")
+    }
+
+    inputWhiteMode.addEventListener('change', () => {
+        if (inputWhiteMode.checked) {
+            html.setAttribute("white", "true")
+            localStorage.setItem('white-mode', true)
+        }
+        else{
+            html.removeAttribute("white")
+            localStorage.removeItem('white-mode')
+        }
+    })
+})
+
+
+
+/*
 const chk = document.getElementById('checkTema')
 
 chk.addEventListener('change' , () => {
     document.body.classList.toggle('dark')
-})
-/*
-
-const tema = document.querySelector('.checkTema')
-let isLightMode = false;
-
-checkTema.addEventListener('change' , () => {
-    isLightMode = (isLightMode) ? false : true;
-    changeTheme()
-})
-
-function changeTheme() {
-    return (isLightMode) ? turnOnDarkMode() : turnOffDarkMode()
-}
-
-const turnOnDarkMode = () => {
-    document.documentElement.style.setProperty('--background', 'var(--background-items)')
-}
-const turnOffDarkMode = () => {
-    document.documentElement.style.setProperty('--background', '#000000')
-}*/
+})*/
