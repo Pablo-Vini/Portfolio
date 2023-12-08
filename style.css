@@ -1,7 +1,53 @@
-html[white]{
+html[dark]{
     background-color: #ffffff;
     color: black;
 }
+
+html[dark] .legendacurriculo{
+    color: #383838;
+}
+
+
+html[dark] .conhecimentos{
+    background-color: #c7c7c7;
+}
+
+html[dark] .conhecimento{
+    background-color: #c7c7c7;
+}
+html[dark] .conhecimento:hover{
+    background-color: #999999;
+}
+
+html[dark] .estudoconhecimento{
+    background-color: #c7c7c7;
+}
+html[dark] .estudoconhecimento:hover{
+    background-color: #999999;
+}
+
+html[dark] .container .card{
+    background: #000000;
+}
+html[dark] .container .card .content h2{
+    color: #c9c9c9;
+}
+
+html[dark] .container .card .content h3{
+    color: #ffffff;
+}
+
+html[dark] .container .card .content p{
+    color: #ffffff;
+}
+
+html[dark] form{
+    background-color: #d1d1d1;
+}
+html[dark] footer{
+    background-color: #c7c7c7;
+}
+
 
 *{
     margin: 0;
@@ -10,10 +56,13 @@ html[white]{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body{
-    min-height: 100vh;
+html{
     background: #000000;
     color: #fff;
+}
+
+body{
+    min-height: 100vh;
     transition: background 0.2s linear;
 }
 
@@ -404,6 +453,7 @@ form{
     padding: 10vh;
     border-radius: 25px;
     border: solid 1px rgb(114, 114, 114);
+    box-shadow: 0px 0px 15px#000;
 }
 
 .tituloFormulario{

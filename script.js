@@ -29,25 +29,25 @@ function Enviar(){
 // MUDANÇA DE TEMA
 
 document.addEventListener('DOMContentLoaded', () => {
-    const whiteModeStorage = localStorage.getItem('white-mode')
+    const darkModeStorage = localStorage.getItem('dark-mode')
     const html = document.querySelector('html')
-    const inputWhiteMode = document.getElementById('checkTema')
+    const inputDarkMode = document.getElementById('input-dark-mode')
 
-    if (whiteModeStorage) {
-        html.setAttribute("white", "true")
+    if(darkModeStorage){
+      html.setAttribute("dark", "true")
     }
 
-    inputWhiteMode.addEventListener('change', () => {
-        if (inputWhiteMode.checked) {
-            html.setAttribute("white", "true")
-            localStorage.setItem('white-mode', true)
-        }
-        else{
-            html.removeAttribute("white")
-            localStorage.removeItem('white-mode')
-        }
+    inputDarkMode.addEventListener('change', () => {
+      if(inputDarkMode.checked){
+        html.setAttribute("dark", "true")
+        localStorage.setItem('dark-mode', true)
+      }else{
+        html.removeAttribute("dark")
+        localStorage.removeItem('dark-mode')
+      }
     })
-})
+
+  })
 
 
 
@@ -56,4 +56,5 @@ const chk = document.getElementById('checkTema')
 
 chk.addEventListener('change' , () => {
     document.body.classList.toggle('dark')
-})*/
+})
+*/
