@@ -33,9 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const html = document.querySelector('html')
     const inputDarkMode = document.getElementById('input-dark-mode')
 
-    if(darkModeStorage){
-      html.setAttribute("dark", "true")
-    }
+    
 
     inputDarkMode.addEventListener('change', () => {
       if(inputDarkMode.checked){
