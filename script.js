@@ -26,28 +26,33 @@ function Enviar(){
     }
 }
 
+// MUDANÇA DE TEMA
+
+document.addEventListener('DOMContentLoaded', () => {
+    const darkModeStorage = localStorage.getItem('dark-mode')
+    const html = document.querySelector('html')
+    const inputDarkMode = document.getElementById('input-dark-mode')
+
+    
+
+    inputDarkMode.addEventListener('change', () => {
+      if(inputDarkMode.checked){
+        html.setAttribute("dark", "true")
+        localStorage.setItem('dark-mode', true)
+      }else{
+        html.removeAttribute("dark")
+        localStorage.removeItem('dark-mode')
+      }
+    })
+
+  })
+
+
+
+/*
 const chk = document.getElementById('checkTema')
 
 chk.addEventListener('change' , () => {
     document.body.classList.toggle('dark')
 })
-/*
-
-const tema = document.querySelector('.checkTema')
-let isLightMode = false;
-
-checkTema.addEventListener('change' , () => {
-    isLightMode = (isLightMode) ? false : true;
-    changeTheme()
-})
-
-function changeTheme() {
-    return (isLightMode) ? turnOnDarkMode() : turnOffDarkMode()
-}
-
-const turnOnDarkMode = () => {
-    document.documentElement.style.setProperty('--background', 'var(--background-items)')
-}
-const turnOffDarkMode = () => {
-    document.documentElement.style.setProperty('--background', '#000000')
-}*/
+*/

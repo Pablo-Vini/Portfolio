@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index</title>
+
+  <style>
+
+    html[dark]{
+      background-color: black;
+    }
+
+    html[dark] .cards .card p{
+      background-color: red;
+      color: white;
+    }
+
+    html[dark] .button{
+      color: white;
+    }
+
+    .cards{
+      display: flex;
+      justify-content: center;
+    }
+
+    .cards .card{
+      margin: 0 10px;
+    }
+
+    .cards .card img{
+      border-radius: 50%;
+      width: 128px;
+    }
+
+    .cards .card p{
+      text-align: center;
+    }
+
+    .button{
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px 0;
+      display: inline-block;
+    }
+    
+    .button:hover{
+      cursor: pointer;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <label for="input-dark-mode">
+    <a class="button">Modo dark</a>
+  </label>
+  <input type="checkbox" id="input-dark-mode">
+
+  <div class="cards">
+    
+    <div class="card">
+      <img src="https://ohmycode.com.br/static/img/icon.png" alt="">
+      <p>@ohmycodebr</p>
+    </div>
+
+    <div class="card">
+      <img src="https://ohmycode.com.br/static/img/icon.png" alt="">
+      <p>@ohmycodebr</p>
+    </div>
+
+    <div class="card">
+      <img src="https://ohmycode.com.br/static/img/icon.png" alt="">
+      <p>@ohmycodebr</p>
+    </div>
+  </div>
+  
+   <script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const darkModeStorage = localStorage.getItem('dark-mode')
+      const html = document.querySelector('html')
+      const inputDarkMode = document.getElementById('input-dark-mode')
+
+      if(darkModeStorage){
+        html.setAttribute("dark", "true")
+      }
+
+      inputDarkMode.addEventListener('change', () => {
+        if(inputDarkMode.checked){
+          html.setAttribute("dark", "true")
+          localStorage.setItem('dark-mode', true)
+        }else{
+          html.removeAttribute("dark")
+          localStorage.removeItem('dark-mode')
+        }
+      })
+
+    })
+
+  </script>
+  
+</body>
+</html>
