@@ -132,3 +132,10 @@ body{
     margin: 10px;
     border: solid 2px black;
 }
+.tituloitem{
+    height: 20%;
+}
+.gif{
+    width: 100%;
+    height: 80%;
+}
