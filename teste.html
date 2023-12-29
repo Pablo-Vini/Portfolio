@@ -1,106 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Index</title>
-
+  <title>Exemplo de Página de Dados</title>
   <style>
-
-    html[dark]{
-      background-color: black;
+    /* Estilos opcionais para melhorar a aparência */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
     }
-
-    html[dark] .cards .card p{
-      background-color: red;
-      color: white;
+    #index {
+      float: left;
+      width: 30%;
+      background-color: #f2f2f2;
+      padding: 20px;
+      box-sizing: border-box;
     }
-
-    html[dark] .button{
-      color: white;
+    #data {
+      float: left;
+      width: 70%;
+      padding: 20px;
+      box-sizing: border-box;
     }
-
-    .cards{
-      display: flex;
-      justify-content: center;
+    ul {
+      list-style: none;
+      padding: 0;
     }
-
-    .cards .card{
-      margin: 0 10px;
-    }
-
-    .cards .card img{
-      border-radius: 50%;
-      width: 128px;
-    }
-
-    .cards .card p{
-      text-align: center;
-    }
-
-    .button{
-      border: 1px solid #ccc;
-      padding: 10px;
-      margin: 10px 0;
-      display: inline-block;
-    }
-    
-    .button:hover{
+    li {
+      margin-bottom: 10px;
       cursor: pointer;
     }
-
+    li:hover {
+      color: blue;
+    }
   </style>
-
 </head>
 <body>
 
-  <label for="input-dark-mode">
-    <a class="button">Modo dark</a>
-  </label>
-  <input type="checkbox" id="input-dark-mode">
+<div id="index">
+  <h2>Índice de Itens</h2>
+  <ul>
+    <li onclick="mostrarDados('item1')">Item 1</li>
+    <li onclick="mostrarDados('item2')">Item 2</li>
+    <li onclick="mostrarDados('item3')">Item 3</li>
+    <!-- Adicione mais itens conforme necessário -->
+  </ul>
+</div>
 
-  <div class="cards">
-    
-    <div class="card">
-      <img src="https://ohmycode.com.br/static/img/icon.png" alt="">
-      <p>@ohmycodebr</p>
-    </div>
+<div id="data">
+  <h2>Dados do Item</h2>
+  <div id="dadosItem"></div>
+</div>
 
-    <div class="card">
-      <img src="https://ohmycode.com.br/static/img/icon.png" alt="">
-      <p>@ohmycodebr</p>
-    </div>
+<script>
+  function mostrarDados(item) {
+    // Aqui você pode definir os dados para cada item selecionado
+    const dados = {
+      item1: "Estes são os dados para o Item 1.",
+      item2: "Estes são os dados para o Item 2.",
+      item3: "Estes são os dados para o Item 3."
+      // Adicione mais dados conforme necessário
+    };
 
-    <div class="card">
-      <img src="https://ohmycode.com.br/static/img/icon.png" alt="">
-      <p>@ohmycodebr</p>
-    </div>
-  </div>
-  
-   <script>
+    // Exibir os dados correspondentes ao item selecionado
+    document.getElementById('dadosItem').innerText = dados[item];
+  }
+</script>
 
-    document.addEventListener('DOMContentLoaded', () => {
-      const darkModeStorage = localStorage.getItem('dark-mode')
-      const html = document.querySelector('html')
-      const inputDarkMode = document.getElementById('input-dark-mode')
-
-      if(darkModeStorage){
-        html.setAttribute("dark", "true")
-      }
-
-      inputDarkMode.addEventListener('change', () => {
-        if(inputDarkMode.checked){
-          html.setAttribute("dark", "true")
-          localStorage.setItem('dark-mode', true)
-        }else{
-          html.removeAttribute("dark")
-          localStorage.removeItem('dark-mode')
-        }
-      })
-
-    })
-
-  </script>
-  
 </body>
 </html>

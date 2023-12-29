@@ -119,6 +119,7 @@ body{
 .Lista{
     margin-top: 100px;
     text-align: center;
+    opacity: 1;
 }
 
 .linha{
