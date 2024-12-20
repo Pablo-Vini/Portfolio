@@ -1,0 +1,58 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/********************** HEADER ******************************/
+
+header{
+    height: 100vh;
+    background: linear-gradient(rgb(0, 0, 39) , rgb(0, 1, 10) , black);
+    color: white;
+    
+}
+h1{
+    font-size: 40pt;
+}
+h2{
+    font-size: 25pt;
+}
+p{
+    font-size: 17pt;
+}
+#menu{
+    height: 90px;
+    width: 100vw;
+    background-color: rgb(0, 0, 0);
+}
+#apresentacao{
+    display: flex;
+    justify-content: space-between;
+}
+#ladoesquerdo{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 50vw;
+}
+#espaconome{
+    width: 30vw;
+    text-align: left;
+    height: 50%;
+}
+#titulo{
+    margin: 10px auto;
+}
+#ladodireito{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    width: 50vw;
+}
+#foto{
+    width: 25vw;
+    margin-top: 5vh;
+    border-radius: 50%;
+}
