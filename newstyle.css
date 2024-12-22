@@ -1,6 +1,12 @@
 *{
     padding: 0;
     margin: 0;
+    
+}
+body{
+    align-items: center;
+    justify-content: center;
+    
 }
 
 /********************** HEADER ******************************/
@@ -22,7 +28,6 @@ p{
 }
 #menu{
     height: 90px;
-    width: 100vw;
     background-color: rgb(0, 0, 0);
 }
 #apresentacao{
@@ -55,4 +60,27 @@ p{
     width: 25vw;
     margin-top: 5vh;
     border-radius: 50%;
+}
+
+
+/*********************** SOBRE MIM ******************************/
+
+#sobremim{
+    height: 100vh;
+    background-color: rgb(39, 39, 39);
+
+}
+
+/*********************** TECNOLOGIAS ******************************/
+
+#tecnologias{
+    height: 100vh;
+    background-color: rgb(0, 0, 58);
+}
+
+/*********************** PROJETOS ******************************/
+
+#projetos{
+    height: 100vh;
+    background-color: rgb(31, 31, 31);
 }
