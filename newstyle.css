@@ -45,6 +45,42 @@ a{
     text-decoration: none;
     color: white;
 }
+/*----------------ANIMAÇÃO ESTRELAS-------------*/
+
+.stars{
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    box-shadow: 50px 30px white,
+    100px 80px white,
+    80px 120px white,
+    300px 20px white,
+    250px 130px white,
+    200px 50px white,
+    150px 100px white,
+    550px 100px white,
+    750px 200px white,
+    150px 100px white,
+    150px 100px white,
+    150px 100px white,
+    150px 100px white,
+    150px 100px white,
+    150px 100px white,
+    150px 100px white,
+    150px 100px white,
+    150px 100px white,
+    320px 100px white;
+    animation: anim-stars 20s linear infinite;
+}
+@keyframes anim-stars{
+    from{
+        transform: translateY(90vh);
+    }
+    to{
+        transform: translateY(0vh);
+    }
+}
+
 #apresentacao{
     display: flex;
     justify-content: space-between;
