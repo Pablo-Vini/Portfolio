@@ -22,7 +22,7 @@ h2{
     font-size: 25pt;
 }
 p{
-    font-size: 17pt;
+    font-size: 15pt;
 }
 #menu{
     height: 90px;
@@ -183,30 +183,50 @@ a{
 /*********************** PROJETOS ******************************/
 
 #projetos{
-    height: 100vh;
-    background-color: rgb(31, 31, 31);
+   
+    background: linear-gradient( black, rgb(0, 1, 10) , rgb(0, 0, 39));
     text-align: center;
     align-items: center;
 }
 
 .espaco-projetos{
-    display: flex;
+    display: block;
     padding-left: 20px;
     padding-right: 20px;
     justify-content: center;
 }
+#title-projetc{
+    margin-bottom: 150px;
+}
 .div-projeto{
-    background-color: rgb(0, 0, 68);
     display: flex;
-    justify-content: space-around;
-    height: 300px;
+    justify-content: center;
+    height: 200px;
     width: 80vw;
+    margin-bottom: 150px;
 }
 .text-projeto{
-    width: 500px;
-    background-color: rgb(8, 49, 85);
+    width: 600px;
+    display: block;
+    align-items: center;
+}
+.title-text-project{
+    font-size: 19pt;
+    margin-bottom: 20px;
+    color: rgb(151, 151, 151);
+}
+.links-deploy{
+    display: flex;
+    justify-content: space-around;
+    height: 70px;
+    align-items: center;
+    font-size: 14pt;
+}
+.a-deploy{
+    box-shadow: 0px 0px 10px white;
     align-items: center;
 }
 .img-projeto{
     height: 400px;
+    margin-top: -100px;
 }
