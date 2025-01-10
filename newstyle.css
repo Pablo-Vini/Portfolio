@@ -4,6 +4,7 @@
     
 }
 body{
+    background-color: black;
     align-items: center;
     justify-content: center;
     color: white;
@@ -27,8 +28,9 @@ p{
 #menu{
     height: 90px;
     width: 100vw;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(19, 19, 19, 50%);
     position: fixed;
+    backdrop-filter: blur( 13.5px );
 }
 #opcoesmenu{
     margin-top: 50px;
@@ -136,7 +138,7 @@ a{
     width: 150px;
     background-color: black;
     border: none;
-    box-shadow: 1px 1px 6px white;
+    box-shadow: 0px 0px 1px white;
 }
 
 /*********************** TECNOLOGIAS ******************************/
@@ -148,6 +150,7 @@ a{
     text-align: center;
 }
 .espaco-tecnologi{
+    margin-top: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -165,12 +168,12 @@ a{
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    box-shadow: 0px 0px 15px rgb(83, 83, 83);
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
     transition: 1s;
 }
 .div-tecnologia:hover{
-    box-shadow: 0px 0px 15px rgb(255, 255, 255);
-    transition: 1s;
+    box-shadow: 0px 0px 2px rgb(255, 255, 255);
+    transition: 0.5s;
 }
 .img-tec{
     width: 30px;
@@ -194,6 +197,7 @@ a{
     padding-left: 20px;
     padding-right: 20px;
     justify-content: center;
+    padding-bottom: 100px;
 }
 #title-projetc{
     margin-bottom: 150px;
@@ -223,10 +227,21 @@ a{
     font-size: 14pt;
 }
 .a-deploy{
-    box-shadow: 0px 0px 10px white;
+    
+    box-shadow: 0px 0px 3px white;
+    padding: 5px;
     align-items: center;
 }
 .img-projeto{
     height: 400px;
     margin-top: -100px;
+}
+/*********************FOOTER******************************/
+
+footer{
+    height: 100px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
