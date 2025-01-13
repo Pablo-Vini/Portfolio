@@ -13,6 +13,7 @@ body{
 /********************** HEADER ******************************/
 
 header{
+    position: relative;
     height: 100vh;
     background: linear-gradient( black, rgb(0, 1, 10) , rgb(0, 0, 39));
 }
@@ -47,7 +48,29 @@ a{
     text-decoration: none;
     color: white;
 }
-/*----------------ANIMAÇÃO ESTRELAS-------------*/
+
+/*----------------ANIMAÇÃO BOLHAS--------------*/
+
+.bolhas{
+    position: absolute;
+    display: flex;
+    margin-top: 200px;
+}
+
+.bolhas span {
+    height: 30px;
+    width: 30px;
+    background: #e5ff00;
+    margin: 0px 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #e5ff0044,
+    0 0 0 50px #e5ff00,
+    0 0 0 100px #e5ff00
+    ;
+}
+
+
+/*----------------ANIMAÇÃO ESTRELAS-------------
 
 .stars{
     width: 3px;
@@ -82,7 +105,7 @@ a{
         transform: translateY(0vh);
     }
 }
-
+*/
 #apresentacao{
     display: flex;
     justify-content: space-between;
