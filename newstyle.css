@@ -66,12 +66,12 @@ a{
 }
 
 .bolhas span {
-    height: 10px;
-    width: 10px;
+    height: 5px;
+    width: 5px;
     background: #efff5e;
     margin: 0px 14px;
     border-radius: 50%;
-    box-shadow: 0 0 0 5px #e5ff0044;
+    box-shadow: 0 0 5px 4px #efff5ece;
     animation: animar calc(200s / var(--i)) linear infinite;
 }
 
@@ -86,10 +86,10 @@ a{
 
 .bolhas span:nth-of-type(even){
     background: rgb(255, 255, 255);
-    box-shadow: 0 0 0 10px #ffffff44;
+    box-shadow: 0 0 5px 4px #ffffffc5;
 }
 
-
+/*****************************************************/
 
 #apresentacao{
     display: flex;
@@ -209,7 +209,6 @@ a{
     display: block;
     padding-left: 20px;
     padding-right: 20px;
-    justify-content: center;
     padding-bottom: 100px;
 }
 #title-projetc{
@@ -219,28 +218,31 @@ a{
     display: flex;
     justify-content: center;
     height: 200px;
-    width: 80vw;
+    width: 90vw;
     margin-bottom: 150px;
 }
 .text-projeto{
-    width: 600px;
+    width: 500px;
     display: block;
     align-items: center;
+    text-align: left;
 }
 .title-text-project{
     font-size: 19pt;
-    margin-bottom: 20px;
-    color: rgb(151, 151, 151);
+    margin-bottom: 5px;
+    color: rgb(255, 255, 255);
+}
+p{
+    color: #bdbdbd;
 }
 .links-deploy{
     display: flex;
-    justify-content: space-around;
     height: 70px;
     align-items: center;
-    font-size: 14pt;
+    font-size: 12pt;
 }
 .a-deploy{
-    
+    margin: 5px;
     box-shadow: 0px 0px 3px white;
     padding: 5px;
     align-items: center;
@@ -270,7 +272,15 @@ footer{
 
 
 @media only screen and (max-device-width: 900px) {
-    
+    h1{
+        font-size: 25pt;
+    }
+    h2{
+        font-size: 15pt;
+    }
+    p{
+        font-size: 13pt;
+    }
 }
 
 
@@ -281,6 +291,35 @@ footer{
 ****    RESPONSIVIDADE 2
 */
 
-@media only screen and (max-device-width: 450px) {
+@media only screen and (max-device-width: 700px) {
+    #apresentacao{
+        display: block;
+        padding-top: 200px;
+    }
+    #ladoesquerdo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+    }
+    #espaconome{
+        width: 80vw;
+        text-align: left;
+        height: 80%;
+    }
     
+    #ladodireito{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        width: 90vw;
+    }
+    #foto{
+        width: 55vw;
+        margin-top: 5vh;
+        border-radius: 50%;
+        z-index: 2;
+    }
 }
