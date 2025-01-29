@@ -1,907 +1,483 @@
-html[dark]{
-    background-color: #ffffff;
-    color: black;
-}
-
-html[dark] .eu{
-    opacity: 1;
-}
-
-html[dark] .legendacurriculo{
-    color: #383838;
-}
-
-
-html[dark] .conhecimentos{
-    background-color: #c7c7c7;
-}
-
-html[dark] .conhecimento{
-    background-color: #c7c7c7;
-}
-html[dark] .conhecimento:hover{
-    background-color: #999999;
-}
-
-html[dark] .estudoconhecimento{
-    background-color: #c7c7c7;
-}
-html[dark] .estudoconhecimento:hover{
-    background-color: #999999;
-}
-
-html[dark] .container .card{
-    background: #000000;
-}
-html[dark] .container .card .content h2{
-    color: #c9c9c9;
-}
-
-html[dark] .container .card .content h3{
-    color: #ffffff;
-}
-
-html[dark] .container .card .content p{
-    color: #ffffff;
-}
-
-html[dark] form{
-    background-color: #d1d1d1;
-}
-html[dark] footer{
-    background-color: #c7c7c7;
-}
-
-
-*{
-    margin: 0;
+* {
     padding: 0;
-    box-sizing: border-box;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+
 }
 
-html{
-    background: #000000;
-    color: #fff;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-    min-height: 100vh;
-    transition: background 0.2s linear;
+:target {
+    scroll-margin-top: .8em;
 }
 
-
-/* =========================================================================================
-===================================== ANIMAÇÃO NO SCROLL ===================================
-============================================================================================
-*/
-
-section{
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
-}
-
-header{
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
-}
-
-.hidden{
-    opacity: 0;
-    filter: blur(15px);
-    transition: all 2.5s;
-    transform: translateX(-100%);
-}
-.show{
-    opacity: 1;
-    filter: blur(0);
-    transition: all 2.5s;
-    transform: translateX(0);
-}
-
-.apresentacao{
-    display: flex;
-    justify-content: center;
-}
-
-
-
-/* =========================================================================================
-============================== APRESENTAÇÃO DO HEADER  =====================================
-============================================================================================
-*/
-.tema{
-    height: 100px;
-    position: absolute;
-    margin-left: 80vw;
-    display: flex;
-    justify-content: center;
+body {
+    background-color: black;
     align-items: center;
+    justify-content: center;
+    color: white;
 }
 
-.claro{
-    position: absolute;
-    width: 20px;
-    left: 2px;
-}
-.escuro{
-    position: absolute;
-    width: 20px;
-    left: 30px;
-}
+/********************** HEADER ******************************/
 
-.checkbox{
-    opacity: 0;
-    position: absolute;
-    width: 100%;
-    z-index: 1;
-}
-
-.label{
-    background-color: #ffffff;
-    width: 50px;
-    height: 25px;
-    border-radius: 50px;
-    cursor: pointer;
-
-    border: solid 1px #000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 5px;
+header {
     position: relative;
-    
-    transform: scale(1.5);
+    height: 100vh;
+    background: linear-gradient(black, rgb(0, 1, 10), rgb(0, 0, 39));
+    overflow: hidden;
 }
 
-.label .ball {
-    background-color: #000000;
-    border-radius: 50%;
-    position: absolute;
-    top: 0px;
-    left: 0px;
+h1 {
+    font-size: 40pt;
+}
 
-    height: 24px;
-    width: 24px;
-    transform: translateX(0px);
-    transition: transform 0.2s linear;
+h2 {
+    font-size: 25pt;
+}
+
+p {
+    font-size: 15pt;
+}
+
+#menu {
+    height: 90px;
+    width: 100vw;
+    background-color: rgb(19, 19, 19, 50%);
+    position: fixed;
+    backdrop-filter: blur(13.5px);
+    z-index: 5;
+}
+
+#opcoesmenu {
+    margin-top: 50px;
+    margin-left: 50px;
+    font-size: 14pt;
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/*----------------ANIMAÇÃO BOLHAS--------------*/
+
+.bolhas {
+    position: absolute;
+    z-index: 0;
+    display: flex;
+}
+
+.bolhas span {
+    height: 5px;
+    width: 5px;
+    background: #efff5e;
+    margin: 0px 14px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 4px #efff5ece;
+    animation: animar calc(200s / var(--i)) linear infinite;
+}
+
+@keyframes animar {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+.bolhas span:nth-of-type(even) {
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 5px 4px #ffffffc5;
+}
+
+/*****************************************************/
+
+#apresentacao {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 90px;
+
+}
+
+#ladoesquerdo {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 50vw;
+}
+
+#espaconome {
+    width: 30vw;
+    text-align: left;
+    height: 50%;
     z-index: 2;
 }
 
-.checkbox:checked + .label .ball{
-    transform: translateX(25px);
+#titulo {
+    margin: 10px auto;
+    z-index: 2;
 }
 
-.eu{
-    position:absolute;
-    opacity: 0.7;
-    left: 0;
-    height: 80vh;
-    margin-top: 20vh;
-}
-
-.hidden{
-    height: 110vh;
-}
-
-.nome{
-    position: absolute;
-    font-size: 15vh;
-    right: 10vh;
-    margin-top: 25vh;
-}
-.dev{
-    position: absolute;
-    font-size: 10vh;
-    right: 10vh;
-    margin-top: 40vh;
-    color: #b9b9b9;
-}
-
-.links{
-    position: absolute;
-    margin-top: 70vh;
-    right: 100px;
-}
-
-.link img{
-    opacity: 0.5;
-    width: 8vh;
-    transition: 1s;
-    
-}
-.link img:hover{
-    opacity: 1;
-}
-
-/* =========================================================================================
-============================ ESPAÇO SOBRE MIM E CURRICULO===================================
-============================================================================================
-*/
-
-.sobremim{
-    width: 85vh;
-    height: 60vh;
-    font-size: 5vh;
-    margin-top: 30vh;
-}
-.espaco_curriculo{
-    margin-top: 30vh;
-    margin-left: 20vh;
-    text-align: center;
-    width: 40vh;
-    height: 50vh;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-}
-
-.espaco_curriculodark{
-    color: #000;
-}
-
-.curriculo{
-    margin-top: 10px;
-    width: 40vh;
-    height: 40vh;
-    transition: 0.5s;
-}
-.curriculo:hover{
-    opacity: 0.3;
-}
-.legendacurriculo{
-    margin-top: -20vh;
-    font-size: 17pt;
-}
-
-
-
-
-
-/* =========================================================================================
-================================= CONHECIMENTOS  ===========================================
-============================================================================================
-*/
-
-.tituloConhecimentos{
-    font-size: 4em;
-    position: absolute;
-    margin-top: 40px;
-}
-
-.conhecimentos{
+#ladodireito {
     display: flex;
-    justify-content: center;
-    background-color: #272727;
-    width: 100%;
-}
-
-.conhecimento{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15%;
-    background-color: #272727;
-    box-shadow: 2px 2px 10px rgb(0, 0, 0);
-    margin: 30vh 1%;
-    width: 8vw;
-    height: 8vw;
-    transition: 0.5s;
-}
-.conhecimento:hover{
-    background-color: #3b3b3b;
-    margin: 29vh 1%;
-}
-
-.imgconhecimento{
-    padding: 5px;
-    position: relative;
-    width: 5vw;
-    height: 5vw;
-}
-legend{
-    position: absolute;
-    margin-top: 6vw;
-}
-
-.estudando{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    height: 50vh;
-    width: 100%;
-    bottom: 0;
-}
-
-.estudoconhecimento{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15%;
-    background-color: #272727;
-    box-shadow: 2px 2px 10px rgb(0, 0, 0);
-    width: 8vw;
-    height: 8vw;
-    transition: 0.5s;
-    margin: 80px 2%;
-}
-.estudoconhecimento:hover{
-    background-color: #3b3b3b;
-    margin: 76px 2%;
-}
-.tituloestudando{
-    position: absolute;
-    font-size: 3em;
-
-}
-/*|||||||||||||||||||||||||||| TITULO PROJETOS ||||||||||||||||||||||||||||||||*/
-
-.tituloProjetos{
-    position: absolute;
-    font-size: 5em;
-}
-
-/* =========================================================================================
-============================ ANIMAÇÃO DOS CARDS  ===========================================
-============================================================================================
-*/
-
-
-.container{
-    width: 100%;
-    position: relative;
-    display: flex;
-    gap: 20px;
-    justify-content:space-between;
-    margin-top: 80px;
+    flex-direction: row;
     flex-wrap: wrap;
-    z-index: 1;
-    padding: 10vh;
+    text-align: center;
+    justify-content: center;
+    width: 50vw;
 }
-.container .card{
-    position: relative;
-    width: 34vh;
-    height: 54vh;
-    margin: 2vh;
-    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    overflow: hidden;
+
+#foto {
+    width: 25vw;
+    margin-top: 5vh;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+
+/*********************** SOBRE MIM ******************************/
+
+#sobremim {
+    height: 100vh;
+    background: linear-gradient(rgb(0, 0, 39), rgb(0, 1, 10), black);
+    text-align: center;
+    align-content: center;
+    padding-left: 20vw;
+    padding-right: 20vw;
+}
+
+#textosobremim {
+    margin-top: 50px;
+}
+
+.curriculo {
+    margin-top: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 14pt;
+    width: 150px;
+    background-color: black;
+    border: none;
+    box-shadow: 0px 0px 1px white;
+}
+
+/*********************** TECNOLOGIAS ******************************/
+
+#tecnologias {
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    justify-content: center;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.espaco-tecnologi {
+    margin-top: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(5px);
+    gap: 5%;
+    height: 15vh;
 }
 
-.container .card .content{
-    padding: 20px;
+.div-tecnologia {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    padding-top: auto;
+    padding-bottom: auto;
+    height: 70px;
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+    transition: 1s;
+}
+
+.div-tecnologia:hover {
+    box-shadow: 0px 0px 2px rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+.img-tec {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.title-tec {
+    font-size: 12pt;
+}
+
+/*********************** PROJETOS ******************************/
+
+#projetos {
+    padding-top: 100px;
+    background: linear-gradient(black, rgb(0, 1, 10), rgb(0, 0, 39));
     text-align: center;
-    transform: translateY(100px);
-    opacity: 0;
-    transition: 0.5s;
+    align-items: center;
 }
 
-.container .card:hover .content{
-    transform: translateY(0px);
-    opacity: 1;
+.espaco-projetos {
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 100px;
 }
 
-.imgcard{
-    z-index: 1;
-    position: absolute;
-    height: 100%;
-    width: 160%;
-    transition: 0.5s;
-}
-.imgcard:hover{
-    opacity: 0;
+#title-projetc {
+    margin-bottom: 150px;
 }
 
-.linkcard{
-    position: absolute;
-    width: 100%;
-    height: 100%;
+.div-projeto {
     display: flex;
     justify-content: center;
+    height: 200px;
+    width: 90vw;
+    margin-bottom: 150px;
 }
 
-.container .card .content h2{
-    position: absolute;
-    top: -80px;
-    right: 30px;
-    font-size: 7em;
-    /*color: rgba(61, 61, 61, 0.5);*/
-    opacity: 0.1;
-    pointer-events: none;
+.text-projeto {
+    width: 500px;
+    display: block;
+    align-items: center;
+    text-align: left;
 }
 
-.container .card .content h3{
-    font-size: 1.6em;
-    z-index: 3;
+.title-text-project {
+    font-size: 19pt;
+    margin-bottom: 5px;
+    color: rgb(255, 255, 255);
 }
 
-.container .card .content p{
-    font-size: 1em;
-    font-weight: 300;
+p {
+    color: #bdbdbd;
 }
 
-.container .card .content a{
-    position: relative;
-    display: inline-block;
-    padding: 8px 20px;
-    margin-top: 15px;
-    background: #fff;
-    color: #000;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: 500;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* =========================================================================================
-==================================== FORMULÁRIO  ===========================================
-============================================================================================
-*/
-
-form{
-    background-color: #272727;
-    width: 50vw;
-    height: 74vh;
+.links-deploy {
     display: flex;
-    justify-content: center;
-    padding: 10vh;
-    border-radius: 25px;
-    border: solid 1px rgb(114, 114, 114);
-    box-shadow: 0px 0px 15px#000;
+    height: 70px;
+    align-items: center;
+    font-size: 12pt;
 }
 
-.tituloFormulario{
-    position: absolute;
-    font-size: 3em;
-}
-label{
-    margin: 15vh 3vh;
-}
-#textarea{
-    position: absolute;
-    margin-top: 27vh;
-    border-radius: 10px;
+.a-deploy {
+    margin: 5px;
+    box-shadow: 0px 0px 3px white;
+    padding: 5px;
+    align-items: center;
 }
 
-.enviar{
-    position: absolute;
-    bottom: 38vh;
-    width: 10vh;
-    height: 5vh;
-    border-radius: 15px;
-    transition: 0.5s;
-    border: solid 2px rgb(0, 0, 0);
+.img-projeto {
+    height: 400px;
+    margin-top: -100px;
 }
-.enviar:hover{
-    background-color: #000;
-    border: solid 2px rgb(255, 255, 255);
-    color: white;
-}
-/* =========================================================================================
-======================================== RODAPÉ  ===========================================
-============================================================================================
-*/
 
-footer{
+/*********************FOOTER******************************/
+
+footer {
     height: 100px;
-    background-color: #1b1b1b;
+    background-color: black;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
-#rodape{
-    margin-top: 40px;
-}
 
 
 
-
-
-
-
-
-/* 
-  ==========================================================================================================================================================
-||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-||||||||||||||||||||||||||||||||||||||||||||||RESPONSIVIDADE A DIFERENTES TAMANHOS DE TELA||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-  ==========================================================================================================================================================
+/****************************************************************************
+***********************************************************************
+**********************************************
+************************
+****    RESPONSIVIDADE 1
 */
 
 
-@media screen and (max-width: 800px){
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+@media only screen and (max-device-width: 900px) {
+    h1 {
+        font-size: 25pt;
     }
-    
-    body{
-        min-height: 100vh;
-        background: #000000;
-        color: #fff;
+
+    h2 {
+        font-size: 15pt;
     }
-    
-    /* =========================================================================================
-    ===================================== ANIMAÇÃO NO SCROLL ===================================
-    ============================================================================================
-    */
-    
-    section{
+
+    p {
+        font-size: 13pt;
+    }
+}
+
+
+/****************************************************************************
+***********************************************************************
+**********************************************
+************************
+****    RESPONSIVIDADE 2
+*/
+
+@media only screen and (max-device-width: 700px) {
+
+
+    #opcoesmenu {
+        margin-left: 0;
         display: flex;
-        justify-content: center;
-        min-height: 130vh;
+        justify-content: space-around;
     }
-    
-    header{
+
+    #apresentacao {
+        display: block;
+        padding-top: 200px;
+    }
+
+    #ladoesquerdo {
         display: flex;
-        justify-content: center;
-        min-height: 100vh;
-    }
-    
-    .hidden{
-        opacity: 0;
-        filter: blur(15px);
-        transition: all 2.5s;
-        transform: translateX(-100%);
-    }
-    .show{
-        opacity: 1;
-        filter: blur(0);
-        transition: all 2.5s;
-        transform: translateX(0);
-    }
-    
-    .apresentacao{
-        display: flex;
-        justify-content: center;
-    }
-    
-    
-    
-    /* =========================================================================================
-    ============================== APRESENTAÇÃO DO HEADER  =====================================
-    ============================================================================================
-    */
-    .eu{
-        position:absolute;
-        opacity: 0.7;
-        left: 0;
-        bottom: 10%;
-        width: 100%;
-        height: 50vh;
-        margin-top: 30vw;
-    }
-    
-    .hidden{
-        height: 110vh;
-    }
-    
-    .nome{
-        position: absolute;
-        font-size: 12vw;
-        right: 10vw;
-        margin-top: 10vh;
-    }
-    .dev{
-        position: absolute;
-        font-size: 7vw;
-        right: 10vw;
-        margin-top: 20vh;
-        color: #b9b9b9;
-    }
-    
-    .links{
-        position: absolute;
-        display:grid;
-        margin-top: 50vh;
-        right: 7vw;
-    }
-    
-    .link img{
-        opacity: 1;
-        width: 8vh;
-        transition: 1s;
-        
-    }
-    
-    
-    /* =========================================================================================
-    ============================ ESPAÇO SOBRE MIM E CURRICULO===================================
-    ============================================================================================
-    */
-    
-    .sobremim{
-        width: 60vw;
-        height: 60vw;
-        font-size: 5vw;
-        margin-top: 10vh;
-    }
-    .espaco_curriculo{
-        position: absolute;
-        margin-top: 70vh;
-        text-align: center;
-        width: 40vw;
-        height: 50vw;
-        color: rgb(255, 255, 255);
-        text-decoration: none;
-    }
-    .curriculo{
-        
-        width: 40vw;
-        height: 40vw;
-    }
-    .legendacurriculo{
-        margin-top:0vh;
-        font-size: 6vw;
-    }
-    
-    
-    
-    
-    /* =========================================================================================
-    ================================= CONHECIMENTOS  ===========================================
-    ============================================================================================
-    */
-    
-    .tituloConhecimentos{
-        font-size: 7vw;
-        position: absolute;
-        margin-top: 40px;
-    }
-    
-    .conhecimentos{
-        display: flex;
-        justify-content: center;
-        background-color: #272727;
-        width: 100%;
-    }
-    
-    .conhecimento{
-        position: relative;
-        display: flex;
-        justify-content: center;
         align-items: center;
-        border-radius: 15%;
-        background-color: #272727;
-        box-shadow: 2px 2px 10px rgb(0, 0, 0);
-        margin: 28vh 1%;
-        width: 15vw;
-        height: 16vw;
-        transition: 0.5s;
-    }
-    .conhecimento:hover{
-        background-color: #3b3b3b;
-        margin: 25vh 1%;
-    }
-    
-    .imgconhecimento{
-        padding: 0;
-        position: relative;
-        width: 9vw;
-        height: 9vw;
-    }
-    legend{
-        position: absolute;
-        margin-top: 12vw;
-        font-size: 3vw;
-    }
-    
-    .estudando{
-        position: absolute;
-        display: flex;
         justify-content: center;
-        height: 50vh;
-        width: 100%;
-        bottom: 10vh;
+        width: 100vw;
     }
-    
-    .estudoconhecimento{
-        position: relative;
+
+    #espaconome {
+        width: 80vw;
+        text-align: left;
+        height: 80%;
+    }
+
+    #ladodireito {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 15%;
-        background-color: #272727;
-        box-shadow: 2px 2px 10px rgb(0, 0, 0);
-        width: 8vw;
-        height: 8vw;
-        transition: 0.5s;
-        margin: 80px 2%;
-    }
-    .estudoconhecimento:hover{
-        background-color: #3b3b3b;
-        margin: 76px 2%;
-    }
-    .tituloestudando{
-        position: absolute;
-        font-size: 7vw;
-    
-    }
-    /*|||||||||||||||||||||||||||| TITULO PROJETOS ||||||||||||||||||||||||||||||||*/
-    
-    .tituloProjetos{
-        position: absolute;
-        font-size: 8vw;
-        margin-top: 2vh;
-    }
-    
-    /* =========================================================================================
-    ============================ ANIMAÇÃO DOS CARDS  ===========================================
-    ============================================================================================
-    */
-    
-    
-    .container{
-        width: 100%;
-        position: relative;
-        display: flex;
-        gap: 0px;
-        justify-content:space-between;
-        margin-top: 10vh;
+        flex-direction: row;
         flex-wrap: wrap;
-        z-index: 1;
-        padding: 1vw;
-        
+        text-align: center;
+        justify-content: center;
+        width: 90vw;
     }
-    .container .card{
-        position: relative;
-        width: 35vw;
-        height: 60vw;
-        margin: 2vh;
-        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 15px;
-        overflow: hidden;
+
+    #foto {
+        width: 55vw;
+        margin-top: 5vh;
+        border-radius: 50%;
+        z-index: 2;
+    }
+
+    /**********************************************************/
+
+
+    #tecnologias {
+        height: 100vh;
+        background-color: rgb(0, 0, 0);
+        justify-content: center;
+        text-align: center;
+        padding-top: 100px;
         display: flex;
+        justify-content: space-around;
+    }
+
+    .espaco-tecnologi {
+        margin-top: 70px;
+        display: block;
         justify-content: center;
         align-items: center;
-        border-top: 1px solid rgba(255, 255, 255, 0.5);
-        border-left: 1px solid rgba(255, 255, 255, 0.5);
-        backdrop-filter: blur(5px);
+        gap: 0%;
+        height: 60vh;
     }
-    
-    .container .card .content{
-        padding: 20px;
-        text-align: center;
-        transform: translateY(0px);
-        opacity: 1;
-        transition: 0.5s;
-    }
-    
-    .container .card:hover .content{
-        transform: translateY(0px);
-        opacity: 1;
-    }
-    
-    .imgcard{
-        z-index: 1;
-        position: absolute;
-        height: 100%;
-        width: 160%;
-        transition: 0.5s;
-        opacity: 0.1;
-    }
-    .imgcard:hover{
-        opacity: 0;
-    }
-    
-    .linkcard{
-        position: absolute;
-        width: 100%;
-        height: 100%;
+
+    .div-tecnologia {
+        background-color: rgb(0, 0, 0);
         display: flex;
+        padding-top: auto;
+        margin: 10px;
+        padding-bottom: auto;
+        height: 70px;
+        width: 150px;
+        align-items: center;
         justify-content: center;
+        border-radius: 50%;
+        box-shadow: 0px 0px 10px rgb(255, 255, 255);
+        transition: 1s;
     }
-    
-    .container .card .content h2{
+
+    .div-tecnologia:hover {
+        box-shadow: 0px 0px 2px rgb(255, 255, 255);
+        transition: 0.5s;
+    }
+
+    .img-tec {
+        width: 30px;
+        margin-right: 10px;
+    }
+
+    .title-tec {
+        font-size: 12pt;
+    }
+
+    #title-section-tec {
         position: absolute;
-        top: 0vw;
-        right: 3%;
-        font-size: 12vw;
-        /*color: rgba(61, 61, 61, 0.5);*/
-        opacity: 0.3;
-        pointer-events: none;
     }
-    
-    .container .card .content h3{
-        font-size: 4vw;
-        z-index: 3;
-        color: rgb(175, 175, 142);
+
+    /************************************************************/
+
+
+    #title-projetc {
+        margin-bottom: 100px;
     }
-    
-    .container .card .content p{
-        font-size: 3.5vw;
-        font-weight: 300;
-    }
-    
-    .container .card .content a{
-        position: relative;
-        display: inline-block;
-        padding: 8px 20px;
-        margin-top: 15px;
-        background: #fff;
-        color: #000;
-        border-radius: 20px;
-        text-decoration: none;
-        font-weight: 500;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-    
-    /* =========================================================================================
-    ==================================== FORMULÁRIO  ===========================================
-    ============================================================================================
-    */
-    
-    form{
-        background-color: #272727;
+
+    .div-projeto {
+        display: block;
+        justify-content: center;
+        height: 400px;
         width: 90vw;
-        height: 70vh;
-        display: flex;
-        margin-top: 20vh;
-        justify-content: center;
-        padding: 10vw;
-        border-radius: 25px;
-        border: solid 1px rgb(114, 114, 114);
+        margin-bottom: 150px;
     }
-    
-    .tituloFormulario{
-        position: absolute;
-        font-size: 10vw;
+
+    .text-projeto {
+        width: 100%;
+        display: block;
+        align-items: center;
+        text-align: center;
     }
-    label{
-        width: 60vw;
-        margin: 15vw 0;
+
+    .title-text-project {
+        font-size: 19pt;
+        margin-bottom: 5px;
+        color: rgb(255, 255, 255);
     }
-    #foneid{
-        width: 35vw;
+
+    p {
+        color: #bdbdbd;
     }
-    #nomeid{
-        width: 35vw;
-    }
-    #textarea{
-        position: absolute;
-        margin-top: 27vh;
-        width: 70vw;
-        border-radius: 10px;
-    }
-    
-    .enviar{
-        position: absolute;
-        bottom: 41vh;
-        width: 10vh;
-        height: 5vh;
-        border-radius: 15px;
-        transition: 0.5s;
-        border: solid 2px rgb(0, 0, 0);
-    }
-    .enviar:hover{
-        background-color: #000;
-        border: solid 2px rgb(255, 255, 255);
-        color: white;
-    }
-    /* =========================================================================================
-    ======================================== RODAPÉ  ===========================================
-    ============================================================================================
-    */
-    
-    footer{
-        height: 100px;
-        background-color: #1b1b1b;
+
+    .links-deploy {
         display: flex;
         justify-content: center;
+        height: 70px;
+        align-items: center;
+        font-size: 12pt;
     }
-    #rodape{
-        margin-top: 40px;
+
+    .a-deploy {
+        margin: 5px;
+        box-shadow: 0px 0px 3px white;
+        padding: 5px;
+        align-items: center;
     }
+
+    .img-projeto {
+        height: 400px;
+        margin-top: -100px;
+    }
+
+
+
+
+
+
+
 }

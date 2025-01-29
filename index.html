@@ -7,161 +7,247 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <header class="hidden" class="apresentacao">
-        <div class="tema">
-            <input type="checkbox" class="checkbox" id="input-dark-mode">
-
-            <label class="label" for="input-dark-mode">
-                <img class="claro" src="img/apresentação/sol.png" alt="Modo Claro">
-                <img class="escuro" src="img/apresentação/lua.png" alt="Modo Escuro">
-                <div class="ball"></div>
-            </label>
+    <header id="pag-ini">
+        <!--    Animação Estrelas   -->
+        <div class="bolhas">
+            <span style="--i:11"></span>
+            <span style="--i:1"></span>
+            <span style="--i:4"></span>
+            <span style="--i:17"></span>
+            <span style="--i:5"></span>
+            <span style="--i:30"></span>
+            <span style="--i:8"></span>
+            <span style="--i:12"></span>
+            <span style="--i:2"></span>
+            <span style="--i:20"></span>
+            <span style="--i:6"></span>
+            <span style="--i:13"></span>
+            <span style="--i:9"></span>
+            <span style="--i:11"></span>
+            <span style="--i:19"></span>
+            <span style="--i:5"></span>
+            <span style="--i:9"></span>
+            <span style="--i:14"></span>
+            <span style="--i:2"></span>
+            <span style="--i:16"></span>
+            <span style="--i:7"></span>
+            <span style="--i:6"></span>
+            <span style="--i:18"></span>
+            <span style="--i:23"></span>
+            <span style="--i:3"></span>
+            <span style="--i:5"></span>
+            <span style="--i:21"></span>
+            <span style="--i:4"></span>
+            <span style="--i:9"></span>
+            <span style="--i:26"></span>
+            <span style="--i:7"></span>
+            <span style="--i:24"></span>
+            <span style="--i:10"></span>
+            <span style="--i:14"></span>
+            <span style="--i:7"></span>
+            <span style="--i:3"></span>
+            <span style="--i:5"></span>
+            <span style="--i:12"></span>
+            <span style="--i:18"></span>
+            <span style="--i:8"></span>
+            <span style="--i:22"></span>
+            <span style="--i:15"></span>
+            <span style="--i:10"></span>
+            <span style="--i:4"></span>
+            <span style="--i:9"></span>
+            <span style="--i:11"></span>
+            <span style="--i:23"></span>
+            <span style="--i:3"></span>
+            <span style="--i:7"></span>
+            <span style="--i:3"></span>
+            <span style="--i:8"></span>
+            <span style="--i:12"></span>
+            <span style="--i:2"></span>
+            <span style="--i:20"></span>
+            <span style="--i:6"></span>
+            <span style="--i:13"></span>
+            <span style="--i:31"></span>
+            <span style="--i:16"></span>
+            <span style="--i:19"></span>
+            <span style="--i:5"></span>
+            <span style="--i:10"></span>
+            <span style="--i:14"></span>
         </div>
         
-        <h1 class="nome">Pablo Vinícius</h1>
-        <h2 class="dev">Developer</h2>
-        <div class="links">
-            <a target="_blank" class="link" href="https://github.com/Pablo-Vini"><img src="img/apresentação/github.png" alt=""></a>
-            <a target="_blank" class="link" href="https://www.linkedin.com/in/pablo-gramos/"><img src="img/apresentação/linkedin.png" alt=""></a>
-            <a target="_blank" class="link" href="https://www.instagram.com/pablo_01110000/"><img src="img/apresentação/instagram2.png" alt=""></a>
-        </div>
-        <img class="eu" src="img/apresentação/novo_sf.png" alt="Imagem eu">
-        
+        <!---------------------------->
+
+        <nav id="menu">
+            
+            <menu id="opcoesmenu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#sobremim">Sobre Mim</a></li>
+                <li><a href="#tecnologias">Tecnologias</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+            </menu>
+            <div class="links-social">
+                
+            </div>
+          
+        </nav>
+        <nav id="apresentacao">
+
+            <div id="ladoesquerdo">
+                <div id="espaconome">
+                    <h1 id="nome">Pablo Vinícius</h1>
+                    <h2 id="titulo">Desenvolvedor de Software</h2>
+                    <p id="textoapresentacao">Olá, sou programador atuando como Freelancer na criação de sistemas web com o  objetivo de transformar sua visão em uma experiência funcional e impactante.</p>
+                </div>
+            </div>
+            <div id="ladodireito">
+                <img id="foto" src="img/apresentação/novo.png" alt="Minha foto">
+            </div>
+        </nav>
     </header>
 
-    <section class="hidden">
-        <p class="sobremim">Olá, meu nome é Pablo Vinícius, sou desenvolvedor de software e freelancer com experiência na criação de sistemas e sites estáticos e dinâmicos, artes que estejam conforme a identidade visual do cliente e projetos que exploram meus conhecimentos e me motive a crescer profissionalmente.</p>
-
-        <a target="_blank" class="espaco_curriculo" href="curriculo/index.html">
-            <img class="curriculo" src="img/curriculo.png" alt="">
-            <p class="legendacurriculo"><strong>CURRÍCULO</strong></p>
-        </a>
-        
-    </section>
-
-    <section class="hidden">
-        <h1 class="tituloConhecimentos">CONHECIMENTOS</h1>
-        <nav class="conhecimentos">
-            <div class="conhecimento">
-                <img class="imgconhecimento" src="img/conhecimentos/html.png" alt="">
-                <legend>HTML</legend>
-            </div>
-            <div class="conhecimento">
-                <img class="imgconhecimento" src="img/conhecimentos/css.png" alt="">
-                <legend>CSS</legend>
-            </div>
-            <div class="conhecimento">
-                <img class="imgconhecimento" src="img/conhecimentos/javascript.png" alt="">
-                <legend>Javascript</legend>
-            </div>
-            <div class="conhecimento">
-                <img class="imgconhecimento" src="img/conhecimentos/python.png" alt="">
-                <legend>Python</legend>
-            </div>
-            <div class="conhecimento">
-                <img class="imgconhecimento" src="img/conhecimentos/java.png" alt="">
-                <legend>Java</legend>
-            </div>
-            <div class="conhecimento">
-                <img class="imgconhecimento" src="img/conhecimentos/mysql.png" alt="">
-                <legend>MySQL</legend>
-            </div>
-            <div class="conhecimento">
-                <img class="imgconhecimento" src="img/conhecimentos/git.png" alt="">
-                <legend>Git</legend>
-            </div>            
-        </nav>
-        <nav class="estudando">
-            <h2 class="tituloestudando">Estou estudando</h2>
-            <div class="estudoconhecimento">
-                <img class="imgconhecimento" src="img/conhecimentos/Spring.png" />
-                <legend>Spring</legend>
-            </div>
-            <div class="estudoconhecimento">
-                <img class="imgconhecimento" src="img/conhecimentos/Wordpress_Blue_logo.png" />
-                <legend>Wordpress</legend>
-            </div>
-        </nav>
-    </section>
-
-
-    <section class="hidden" class="section3">
-        <h1 class="tituloProjetos">PROJETOS</h1>
-        
-        <div class="container">
-            <div class="card">
-                <a target="_blank" class="linkcard" href="https://palmasimpressoras.netsites.net.br"><img class="imgcard" src="img/projetos/site_palmas_impressoras.PNG" alt=""></a>
-                <div class="content">
-                    <h2>01</h2>
-                    <h3>Site para Palmas Impressoras</h3>
-                    <p>Site para empresa local Palmas Impressoras utilizando Wordpress, criação de banners e imagens pelo Canva de forma que estejam de acordo com a identidade visual da empresa</p>
-                </div>
-            </div>
-            <div class="card">
-                <a target="_blank" class="linkcard" href="https://github.com/Pablo-Vini/Reconhecimento-Facial"><img class="imgcard" src="img/projetos/projeto_face.png" alt=""></a>
-                <div class="content">
-                    <h2>02</h2>
-                    <h3>Reconhecimento de Faces</h3>
-                    <p>Detecção e reconhecimento de faces com Python e OpenGL, programa reconhece a face 
-                        cadastrada e apresenta a confiabilidade de precisão</p>
-                </div>
-            </div>
-            <div class="card">
-                <a target="_blank" class="linkcard" href="https://github.com/Pablo-Vini/Projeto_CRUD_Spring"><img class="imgcard" src="img/projetos/crud_spring.png" alt=""></a>
-                <div class="content">
-                    <h2>03</h2>
-                    <h3>CRUD Spring Boot</h3>
-                    <p>Projeto de CRUD com Spring Boot, criação de API RESTful na IDE STS, 
-                        analizando metodos e resultados com Postman e MySQL.</p>
-                </div>
-            </div>
-            <div class="card">
-                <a target="_blank" class="linkcard" href="https://bia-pablo.netlify.app/"><img class="imgcard" src="img/projetos/sitecasamento.jpg" alt=""></a>
-                <div class="content">
-                    <h2>04</h2>
-                    <h3>Site de Casamento</h3>
-                    <p>Site desenvolvido para meu casamento, utilizando HTML, CSS e Javascript.</p>
-                </div>
-            </div>
+    <section id="sobremim">
+        <h1>Sobre mim</h1>
+        <p id="textosobremim">Sou programador apaixonado por transformar ideias em soluções digitais inovadoras! Com experiência sólida em projetos freelancer, tenho expertise no desenvolvimento de sites com WordPress, além de criar aplicações robustas utilizando Java, Spring e SQL. Me dedico ao aprendizado contínuo e estou sempre em busca das mais recentes tecnologias para me manter alinhado às tendências do mercado. Estou pronto para enfrentar novos desafios e contribuir para o sucesso de projetos incríveis. Vamos criar algo extraordinário juntos!</p>
+        <div id="div-button">
+            <button class="curriculo"><a target="_blank" href="curriculo/index.html">CV Pt-Br</a></button>
+            <button class="curriculo"><a target="_blank" href="curriculo/index_ingles.html">CV En</a></button>
         </div>
+        
     </section>
-    <section class="hidden" class="section5">
-        <form id="form" action="https://formsubmit.co/pablovgramos@gmail.com" method="post">
-            <h1 class="tituloFormulario">Entre em Contato</h1>
-            <label id="margin" class="labelnome" for="nome">
-                Nome<br>
-                <input type="text" id="nomeid" placeholder="Seu nome" required="required" name="name">
-            </label>
-            <label class="labelnome"  for="fone">
-                Telefone<br>
-                <input type="tel" id="foneid" placeholder="(xx)x xxxx-xxxx" name="fone">
-            </label>
-            <textarea name="massage" id="textarea" cols="50" rows="10" placeholder="Deixe sua mensagem..." required></textarea>
 
-            <button type="submit" class="enviar" onclick="Enviar()">Enviar</button>
-            <input type="hidden" name="_subject" value="Novo Contato!">
-            <input type="text" name="_honey" style="display:none;">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://pablo-vini.github.io/Portfolio/">
-        </form>
+    <section id="tecnologias">
+        <h1 id="title-section-tec">Tecnologias</h1>
+        <nav class="espaco-tecnologi">
+            <div class="div-tecnologia">
+                <img class="img-tec" src="img/conhecimentos/html.png" alt="HTML">
+                <h3 class="title-tec">HTML</h3>
+            </div>
+            <div class="div-tecnologia">
+                <img class="img-tec" src="img/conhecimentos/css.png" alt="CSS">
+                <h3 class="title-tec">CSS</h3>
+            </div>
+            <div class="div-tecnologia">
+                <img class="img-tec" src="img/conhecimentos/java-script.png" alt="javascript">
+                <h3 class="title-tec">Javascript</h3>
+            </div>
+            <div class="div-tecnologia">
+                <img class="img-tec" src="img/conhecimentos/php.png" alt="Git">
+                <h3 class="title-tec">PHP</h3>
+            </div>
+            <div class="div-tecnologia">
+                <img class="img-tec" src="img/conhecimentos/vue.png" alt="Git">
+                <h3 class="title-tec">Vue</h3>
+            </div>
+            <div class="div-tecnologia">
+                <img class="img-tec" src="img/conhecimentos/java.png" alt="Java">
+                <h3 class="title-tec">Java</h3>
+            </div>
+            
+            
+            
+        </nav>
+        <nav class="espaco-tecnologi">
+            <div class="div-tecnologia">
+                <img class="img-tec" src="img/conhecimentos/mysql.png" alt="MySQL">
+                <h3 class="title-tec">MySQL</h3>
+            </div>
+            <div class="div-tecnologia">
+                <img class="img-tec" src="img/conhecimentos/wordpress.png" alt="WordPress">
+                <h3 class="title-tec">WordPress</h3>
+            </div>
+            <div class="div-tecnologia">
+                <img class="img-tec" src="img/conhecimentos/sql-server.png" alt="sql server">
+                <h3 class="title-tec">SQL Server</h3>
+            </div>
+            <div class="div-tecnologia">
+                <img class="img-tec" src="img/conhecimentos/git.png" alt="Git">
+                <h3 class="title-tec">Git</h3>
+            </div>
+            
+            <div class="div-tecnologia">
+                <img class="img-tec" src="img/conhecimentos/Spring.png" alt="spring">
+                <h3 class="title-tec">Spring</h3>
+            </div>
+            <div class="div-tecnologia">
+                <img class="img-tec" src="img/conhecimentos/python.png" alt="Python">
+                <h3 class="title-tec">Python</h3>
+            </div>
+        </nav>
     </section>
+
+    <section id="projetos">
+        <h1 id="title-projetc">Projetos</h1>
+        <nav class="espaco-projetos">
+            <div class="div-projeto">
+                <div class="text-projeto">
+                    <h3 class="title-text-project">Site para casamento</h3>
+                    <p>Este foi o site desenvolvido para meu casamento realizado em 04/07/2024, utilizando <strong>HTML</strong>, <strong>CSS</strong> e <strong>Javascript</strong>.</p>
+                    <div class="links-deploy">
+                        <a class="a-deploy" target="_blank" href="https://bia-pablo.netlify.app/">Deploy</a>
+                        <a class="a-deploy" target="_blank" href="https://github.com/Pablo-Vini/SiteCasamento">Repositório</a>
+                    </div>
+                </div>
+                <img class="img-projeto" src="img/projetos/1.png" alt="Projeto 1">
+            </div>
+
+            <div class="div-projeto">
+                <div class="text-projeto">
+                    <h3 class="title-text-project">Site para Loja Palmas Impressoras</h3>
+                    <p>Site desenvolvido em <strong>Wordpress</strong> e <strong>Elementor</strong> para comercio local chamado Palmas Impressoras, foi realizado cadastro de produtos e a criação de artes para o site com o <strong>Canva</strong>, o site é responsivo tendo banners personalizados para cada tipo de aparelho.</p>
+                    <div class="links-deploy">
+                        <a class="a-deploy" target="_blank" href="https://palmasimpressoras.com.br/">Deploy</a>
+                    </div>
+                </div>
+                <img class="img-projeto" src="img/projetos/2.png" alt="Projeto 1">
+            </div>
+
+            <div class="div-projeto">
+                <div class="text-projeto">
+                    <h3 class="title-text-project">Site para loja Meta Cromo</h3>
+                    <p>Site para comercio local chamado Meta Cromo, utilizando <strong>Wordpress</strong> e <strong>Elementor</strong> criei um site responsívo com diversos produtos cadastrados.</p>
+                    <div class="links-deploy">
+                        <a class="a-deploy" target="_blank" href="https://metacromo.net.br/">Deploy</a>
+                    </div>
+                </div>
+                <img class="img-projeto" src="img/projetos/3.png" alt="Projeto 1">
+            </div>
+
+            <div class="div-projeto">
+                <div class="text-projeto">
+                    <h3 class="title-text-project">Site para portfólio Unigeo</h3>
+                    <p>Site de portfólio de serviços ambientais para empresa Unigeo, utilizando <strong>Wordpress</strong> e <strong>Elementor</strong> o site ficou responsivo e de acordo com a identidade visual da empresa.</p>
+                    <div class="links-deploy">
+                        <a class="a-deploy" target="_blank" href="https://unigeo.netsites.net.br">Deploy</a>
+                    </div>
+                </div>
+                <img class="img-projeto" src="img/projetos/4.png" alt="Projeto 1">
+            </div>
+
+            <div class="div-projeto">
+                <div class="text-projeto">
+                    <h3 class="title-text-project">Reconhecimento facial</h3>
+                    <p>Programa de detecção e reconhecimento facial com <strong>Python</strong> e <strong>OpenGL</strong>, o programa captura as fotos da face, treina, detecta a face, compara com as imagens cadastradas e apresenta o grau de confiabilidade.</p>
+                    <div class="links-deploy">
+                        <a class="a-deploy" target="_blank" href="https://github.com/Pablo-Vini/Reconhecimento-Facial">Repositório</a>
+                    </div>
+                </div>
+                <img class="img-projeto" src="img/projetos/5.png" alt="Projeto 1">
+            </div>
+
+            <div class="div-projeto">
+                <div class="text-projeto">
+                    <h3 class="title-text-project">CRUD Spring Boot</h3>
+                    <p>Projeto de CRUD utiliando <strong>Spring Boot</strong> e <strong>MySQL</strong>, seguindo o padrão para criação de <strong>API RESTful</strong> utilizando a IDE <strong>STS</strong> e o Postman para monitoramento de dados.</p>
+                    <div class="links-deploy">
+                        <a class="a-deploy" target="_blank" href="https://github.com/Pablo-Vini/Projeto_CRUD_Spring">Repositório</a>
+                    </div>
+                </div>
+                <img class="img-projeto" src="img/projetos/6.png" alt="Projeto 1">
+            </div>
+        </nav>
+    </section>
+
     <footer>
-        <p id="rodape">Copyright &copy; 2024 - by Pablo Vinícius</p>
+        <p>Copyright © 2025 - por Pablo Vinícius</p>
     </footer>
-    
 </body>
-<script type="text/javascript" src="vanilla-tilt.js"></script>
-<script src="script.js"></script>
-<script>
-    VanillaTilt.init(document.querySelectorAll(".card"), {
-		max: 25,
-		speed: 400,
-        glare: true,
-        "max-glare": 1,
-	});
-
-
-    
-</script>
 </html>
