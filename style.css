@@ -414,9 +414,9 @@ footer {
 
     #galaxia1 {
         position: absolute;
-        width: 200px;
+        width: 250px;
         left: 5px;
-        margin-top: 0px;
+        margin-top: -250px;
         z-index: 3;
     }
 
@@ -430,9 +430,9 @@ footer {
 
     #galaxia3 {
         position: absolute;
-        width: 500px;
+        width: 70vw;
         left: 5px;
-        margin-top: 300px;
+        margin-top: 600px;
         z-index: 3;
     }
 
@@ -446,8 +446,9 @@ footer {
 
     #estrelas {
         position: absolute;
-        width: 800px;
-        margin-top: -200px;
+        width: 80vw;
+        left: 0px;
+        margin-top: 0px;
     }
 
     /**********************************************************/
@@ -506,8 +507,18 @@ footer {
     }
 
     /************************************************************/
+    #sobremim {
+        height: 100vh;
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
 
+    #textosobremim {
+        margin-top: 50px;
+        font-size: 11pt;
+    }
 
+    /************************************************************/
     #title-projetc {
         margin-bottom: 100px;
     }
@@ -553,8 +564,9 @@ footer {
     }
 
     .img-projeto {
-        height: 400px;
-        margin-top: -100px;
+        height: auto;
+        width: 80vw;
+        margin-top: -50px;
     }
 
 
