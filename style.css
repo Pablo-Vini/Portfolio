@@ -369,11 +369,22 @@ footer {
 
 @media only screen and (max-device-width: 900px) {
 
-
+    #menu {
+        height: 60px;
+        width: 100vw;
+        background-color: rgb(19, 19, 19, 50%);
+        position: fixed;
+        backdrop-filter: blur(13.5px);
+        z-index: 30;
+    }
+    
     #opcoesmenu {
-        margin-left: 0;
+        margin-top: 30px;
+        margin-left: 0px;
+        font-size: 11pt;
         display: flex;
         justify-content: space-around;
+        width: 100vw;
     }
 
     #apresentacao {
@@ -452,8 +463,19 @@ footer {
     }
 
     /**********************************************************/
-
-
+    .curriculo {
+        margin-top: 40px;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 14pt;
+        padding: 4px;
+        width: 150px;
+        background-color: black;
+        border: none;
+        box-shadow: 0px 0px 1px white;
+        z-index: 300;
+    }
+/**********************************************************/
     #tecnologias {
         height: 100vh;
         background-color: rgb(0, 0, 0);
@@ -569,10 +591,10 @@ footer {
         margin-top: -50px;
     }
 
-
-
-
-
-
-
+    footer {
+        height: 80px;
+    }
+    #Copyright{
+        font-size: 10pt;
+    }
 }
