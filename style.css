@@ -333,7 +333,7 @@ p {
 
 footer {
     height: 100px;
-    background-color: black;
+    background: linear-gradient(rgb(0, 0, 39), rgb(0, 1, 10), black);
     display: flex;
     align-items: center;
     justify-content: center;
