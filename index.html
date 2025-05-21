@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header id="pag-ini">
+    <header class="pag-ini" id="pag-ini">
         <!--    Animação Estrelas   -->
         <div class="bolhas">
             <span style="--i:11"></span>
@@ -76,7 +76,7 @@
         
         <!---------------------------->
 
-        <nav id="menu">
+        <nav class="menu" id="menu">
             
             <menu id="opcoesmenu">
                 <li><a href="#">Home</a></li>
@@ -89,7 +89,16 @@
                 <a href="https://www.instagram.com/pabloramos_dev/" target="_blank"><img class="icone-social" src="img/apresentação/instagramW.png" alt="Instagram"></a>
                 <a href="https://github.com/Pablo-Vini" target="_blank"><img class="icone-social" src="img/apresentação/githubW.png" alt="GitHub"></a>
             </div>
-          
+
+            <div class="modo-dark">
+                <input class="checkbox" type="checkbox" id="chk">
+
+                <label class="label" for="chk">
+                    <img class="img-dark" src="img/apresentação/imgSol.png" alt="">
+                    <img class="img-dark" src="img/apresentação/imgLua.png" alt="">
+                    <div class="ball"></div>
+                </label>
+            </div>
         </nav>
         <nav id="apresentacao">
             <img id="astronauta" src="img/galaxias/astronauta1.png" alt="">
@@ -106,9 +115,9 @@
         </nav>
     </header>
 
-    <section id="sobremim">
+    <section id="sobremim" class="sobremim">
         <h1>Sobre mim</h1>
-        <p id="textosobremim">Sou programador apaixonado por transformar ideias em soluções digitais inovadoras! Com experiência sólida em projetos freelancer, tenho expertise no desenvolvimento de sites com WordPress, além de criar aplicações robustas utilizando Java, Spring e SQL. Me dedico ao aprendizado contínuo e estou sempre em busca das mais recentes tecnologias para me manter alinhado às tendências do mercado. Estou pronto para enfrentar novos desafios e contribuir para o sucesso de projetos incríveis. Vamos criar algo extraordinário juntos!</p>
+        <p class="textosobremim" id="textosobremim">Sou programador apaixonado por transformar ideias em soluções digitais inovadoras! Com experiência sólida em projetos freelancer, tenho expertise no desenvolvimento de sites com WordPress, além de criar aplicações robustas utilizando Java, Spring e SQL. Me dedico ao aprendizado contínuo e estou sempre em busca das mais recentes tecnologias para me manter alinhado às tendências do mercado. Estou pronto para enfrentar novos desafios e contribuir para o sucesso de projetos incríveis. Vamos criar algo extraordinário juntos!</p>
         <div id="div-button">
             <button class="curriculo"><a target="_blank" href="curriculo/index.html">CV Pt-Br</a></button>
             <button class="curriculo"><a target="_blank" href="curriculo/index_ingles.html">CV En</a></button>
@@ -116,31 +125,31 @@
         <img id="estrelas" src="img/galaxias/estrelas.png" alt="">
     </section>
 
-    <section id="tecnologias">
+    <section id="tecnologias" class="tecnologias">
         <img id="galaxia1" src="img/galaxias/galaxia1.png" alt="">
         <h1 id="title-section-tec">Tecnologias</h1>
         <nav class="espaco-tecnologi">
-            <div class="div-tecnologia">
+            <div id="div-tecnologia" class="div-tecnologia">
                 <img class="img-tec" src="img/conhecimentos/html.png" alt="HTML">
                 <h3 class="title-tec">HTML</h3>
             </div>
-            <div class="div-tecnologia">
+            <div id="div-tecnologia" class="div-tecnologia">
                 <img class="img-tec" src="img/conhecimentos/css.png" alt="CSS">
                 <h3 class="title-tec">CSS</h3>
             </div>
-            <div class="div-tecnologia">
+            <div id="div-tecnologia" class="div-tecnologia">
                 <img class="img-tec" src="img/conhecimentos/java-script.png" alt="javascript">
                 <h3 class="title-tec">Javascript</h3>
             </div>
-            <div class="div-tecnologia">
+            <div id="div-tecnologia" class="div-tecnologia">
                 <img class="img-tec" src="img/conhecimentos/php.png" alt="Git">
                 <h3 class="title-tec">PHP</h3>
             </div>
-            <div class="div-tecnologia">
+            <div id="div-tecnologia" class="div-tecnologia">
                 <img class="img-tec" src="img/conhecimentos/vue.png" alt="Git">
                 <h3 class="title-tec">Vue</h3>
             </div>
-            <div class="div-tecnologia">
+            <div id="div-tecnologia" class="div-tecnologia">
                 <img class="img-tec" src="img/conhecimentos/java.png" alt="Java">
                 <h3 class="title-tec">Java</h3>
             </div>
@@ -149,28 +158,28 @@
             
         </nav>
         <nav class="espaco-tecnologi">
-            <div class="div-tecnologia">
+            <div id="div-tecnologia" class="div-tecnologia">
                 <img class="img-tec" src="img/conhecimentos/mysql.png" alt="MySQL">
                 <h3 class="title-tec">MySQL</h3>
             </div>
-            <div class="div-tecnologia">
+            <div id="div-tecnologia" class="div-tecnologia">
                 <img class="img-tec" src="img/conhecimentos/wordpress.png" alt="WordPress">
                 <h3 class="title-tec">WordPress</h3>
             </div>
-            <div class="div-tecnologia">
+            <div id="div-tecnologia" class="div-tecnologia">
                 <img class="img-tec" src="img/conhecimentos/sql-server.png" alt="sql server">
                 <h3 class="title-tec">SQL Server</h3>
             </div>
-            <div class="div-tecnologia">
+            <div id="div-tecnologia" class="div-tecnologia">
                 <img class="img-tec" src="img/conhecimentos/git.png" alt="Git">
                 <h3 class="title-tec">Git</h3>
             </div>
             
-            <div class="div-tecnologia">
+            <div id="div-tecnologia" class="div-tecnologia">
                 <img class="img-tec" src="img/conhecimentos/Spring.png" alt="spring">
                 <h3 class="title-tec">Spring</h3>
             </div>
-            <div class="div-tecnologia">
+            <div id="div-tecnologia" class="div-tecnologia">
                 <img class="img-tec" src="img/conhecimentos/python.png" alt="Python">
                 <h3 class="title-tec">Python</h3>
             </div>
@@ -179,7 +188,7 @@
         <img id="galaxia3" src="img/galaxias/galaxia3.png" alt="">
     </section>
 
-    <section id="projetos">
+    <section id="projetos" class="projetos">
         <h1 id="title-projetc">Projetos</h1>
         <nav class="espaco-projetos">
             <div class="div-projeto">
@@ -256,5 +265,6 @@
         
         <p id="Copyright">Copyright © 2025 - por Pablo Vinícius</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

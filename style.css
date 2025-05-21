@@ -13,13 +13,17 @@ html {
 }
 
 body {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     align-items: center;
     justify-content: center;
     color: white;
     font-family: monospace;
+    transition: background 0.2s linear;
 }
-
+body.dark{
+    background-color: white;
+    color: black;
+}
 /********************** ILUSTRAÇÕES GALAXIAS ******************************/
 
 #galaxia1 {
@@ -68,6 +72,11 @@ header {
     height: 100vh;
     background: linear-gradient(black, rgb(0, 1, 10), rgb(0, 0, 39));
     overflow: hidden;
+    color: white;
+}
+header.dark{
+    background: linear-gradient(rgb(255, 255, 255), rgb(236, 236, 236), rgb(172, 172, 172));
+    color: black;
 }
 
 h1 {
@@ -82,13 +91,16 @@ p {
     font-size: 15pt;
 }
 
-#menu {
+.menu {
     height: 90px;
     width: 100vw;
-    background-color: rgb(19, 19, 19, 50%);
+    background-color: rgba(173, 173, 173, 0.233);
     position: fixed;
     backdrop-filter: blur(13.5px);
     z-index: 30;
+}
+.menu.dark{
+    background-color: rgba(105, 105, 105, 0.616);
 }
 
 #opcoesmenu {
@@ -115,15 +127,54 @@ a {
     width: 300px;
     height: 50px;
     position: absolute;
-    right: 10px;
+    right: 250px;
     top: 35px;
 }
 .icone-social{
     width: 50px;
 }
-i{
-    font-size: 50px;
+.modo-dark{
+    width: 120px;
+    position: absolute;
+    right: 50px;
+    display: flex;
+    justify-content: center;
+    top: 45px;
 }
+.img-dark{
+    width: 30px;
+}
+.checkbox{
+    position: absolute;
+    opacity: 0;
+}
+.label{
+    position: relative;
+    background-color: rgb(194, 194, 194);
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2px 4px;
+    transform: scale(1.1);
+}
+.label .ball{
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 30px;
+    width: 30px;
+
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+.checkbox:checked + .label .ball{
+    transform: translateX(35px);
+}
+
 /*----------------ANIMAÇÃO BOLHAS--------------*/
 
 .bolhas {
@@ -204,7 +255,7 @@ i{
 
 /*********************** SOBRE MIM ******************************/
 
-#sobremim {
+.sobremim {
     height: 100vh;
     background: linear-gradient(rgb(0, 0, 39), rgb(0, 1, 10), black);
     text-align: center;
@@ -212,9 +263,16 @@ i{
     padding-left: 20vw;
     padding-right: 20vw;
 }
+.sobremim.dark{
+    background: linear-gradient(rgb(172, 172, 172),  rgb(236, 236, 236), rgb(255, 255, 255));
+}
 
-#textosobremim {
+.textosobremim {
     margin-top: 50px;
+    color: #ffffff;
+}
+.textosobremim.dark{
+    color: black;
 }
 #div-button{
     z-index: 30;
@@ -233,14 +291,16 @@ i{
 
 /*********************** TECNOLOGIAS ******************************/
 
-#tecnologias {
+.tecnologias {
     height: 100vh;
     background-color: rgb(0, 0, 0);
     justify-content: center;
     text-align: center;
     padding-top: 100px;
 }
-
+.tecnologias.dark{
+    background-color: rgb(255, 255, 255);
+}
 .espaco-tecnologi {
     margin-top: 70px;
     display: flex;
@@ -252,7 +312,6 @@ i{
 }
 
 .div-tecnologia {
-    background-color: rgb(0, 0, 0);
     display: flex;
     padding-top: auto;
     padding-bottom: auto;
@@ -265,12 +324,16 @@ i{
     transition: 1s;
     z-index: 20;
 }
-
+.div-tecnologia.dark{
+    box-shadow: 0px 0px 2px rgb(0, 0, 0);
+}
 .div-tecnologia:hover {
     box-shadow: 0px 0px 10px rgb(255, 255, 255);
     transition: 0.5s;
 }
-
+.div-tecnologia:hover.dark{
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
 .img-tec {
     width: 30px;
     margin-right: 10px;
@@ -282,11 +345,15 @@ i{
 
 /*********************** PROJETOS ******************************/
 
-#projetos {
+.projetos {
     padding-top: 100px;
     background: linear-gradient(black, rgb(0, 1, 10), rgb(0, 0, 39));
     text-align: center;
     align-items: center;
+}
+.projetos.dark{
+    background: linear-gradient(rgb(255, 255, 255), rgb(238, 238, 238), rgb(226, 226, 226));
+    color: black;
 }
 
 .espaco-projetos {
@@ -399,14 +466,25 @@ footer {
     }
     
     #opcoesmenu {
-        margin-top: 30px;
+        margin-top: 10px;
         margin-left: 0px;
         font-size: 11pt;
         display: flex;
         justify-content: space-around;
         width: 100vw;
     }
-
+    .links-social{
+        display: flex;
+        justify-content: space-around;
+        width: 100px;
+        height: 50px;
+        position: absolute;
+        right: 10px;
+        top: 35px;
+    }
+    .icone-social{
+        width: 25px;
+    }
     #apresentacao {
         display: block;
         padding-top: 200px;
