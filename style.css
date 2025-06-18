@@ -350,6 +350,8 @@ a {
 /*********************** PROJETOS ******************************/
 
 .projetos {
+    display: flex;
+    flex-direction: column;
     padding-top: 100px;
     background: linear-gradient(black, rgb(0, 1, 10), rgb(0, 0, 39));
     text-align: center;
@@ -361,9 +363,13 @@ a {
 }
 
 .espaco-projetos {
-    display: block;
-    padding-left: 20px;
-    padding-right: 20px;
+    width: 95vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
     padding-bottom: 100px;
 }
 
@@ -373,17 +379,23 @@ a {
 
 .div-projeto {
     display: flex;
-    justify-content: center;
-    height: 200px;
-    width: 90vw;
-    margin-bottom: 150px;
+    justify-content: space-around;
+    align-items: center;
+    height: 300px;
+    width: 700px;
+    margin-bottom: 100px;
+    box-shadow: white 0px 0px 8px;
+    border-radius: 10px;
 }
 
 .text-projeto {
-    width: 500px;
-    display: block;
-    align-items: center;
+    width: 350px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
     text-align: left;
+    justify-content: center;
+    padding-left: 10px;
 }
 
 .title-text-project {
@@ -394,14 +406,18 @@ a {
 .title-text-project.dark{
     color: rgb(0, 0, 0);
 }
-
+strong{
+    color: #004cda;
+}
 p {
     color: #bdbdbd;
 }
 
 .links-deploy {
     display: flex;
+    justify-content: space-around;
     height: 70px;
+    width: 100%;
     align-items: center;
     font-size: 12pt;
 }
@@ -414,8 +430,7 @@ p {
 }
 
 .img-projeto {
-    height: 400px;
-    margin-top: -100px;
+    height: 350px;
 }
 
 /*********************FOOTER******************************/
