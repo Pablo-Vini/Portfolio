@@ -24,10 +24,7 @@ body {
     font-family: monospace;
     /*transition: background 0.2s linear;*/
 }
-body.dark{
-    background-color: white;
-    color: black;
-}
+
 /********************** ILUSTRAÇÕES GALAXIAS ******************************/
 
 #galaxia1 {
@@ -78,10 +75,7 @@ header {
     overflow: hidden;
     color: white;
 }
-header.dark{
-    background: linear-gradient(rgb(255, 255, 255), rgb(236, 236, 236), rgb(172, 172, 172));
-    color: black;
-}
+
 
 h1 {
     font-size: 40pt;
@@ -102,9 +96,6 @@ p {
     position: fixed;
     backdrop-filter: blur(13.5px);
     z-index: 30;
-}
-.menu.dark{
-    background-color: rgba(105, 105, 105, 0.616);
 }
 
 #opcoesmenu {
@@ -136,47 +127,6 @@ a {
 }
 .icone-social{
     width: 50px;
-}
-.modo-dark{
-    width: 120px;
-    position: absolute;
-    right: 50px;
-    display: flex;
-    justify-content: center;
-    top: 45px;
-}
-.img-dark{
-    width: 30px;
-}
-.checkbox{
-    position: absolute;
-    opacity: 0;
-}
-.label{
-    position: relative;
-    background-color: rgb(194, 194, 194);
-    border-radius: 50px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 2px 4px;
-    transform: scale(1.1);
-}
-.label .ball{
-    background-color: black;
-    border-radius: 50%;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    height: 30px;
-    width: 30px;
-
-    transform: translateX(0px);
-    transition: transform 0.2s linear;
-}
-.checkbox:checked + .label .ball{
-    transform: translateX(35px);
 }
 
 /*----------------ANIMAÇÃO BOLHAS--------------*/
@@ -267,16 +217,10 @@ a {
     padding-left: 20vw;
     padding-right: 20vw;
 }
-.sobremim.dark{
-    background: linear-gradient(rgb(172, 172, 172),  rgb(236, 236, 236), rgb(255, 255, 255));
-}
 
 .textosobremim {
     margin-top: 50px;
     color: #ffffff;
-}
-.textosobremim.dark{
-    color: black;
 }
 #div-button{
     z-index: 30;
@@ -302,9 +246,7 @@ a {
     text-align: center;
     padding-top: 100px;
 }
-.tecnologias.dark{
-    background-color: rgb(255, 255, 255);
-}
+
 .espaco-tecnologi {
     margin-top: 70px;
     display: flex;
@@ -328,16 +270,12 @@ a {
     transition: 1s;
     z-index: 20;
 }
-.div-tecnologia.dark{
-    box-shadow: 0px 0px 2px rgb(0, 0, 0);
-}
+
 .div-tecnologia:hover {
     box-shadow: 0px 0px 10px rgb(255, 255, 255);
     transition: 0.5s;
 }
-.div-tecnologia:hover.dark{
-    box-shadow: 0px 0px 10px rgb(0, 0, 0);
-}
+
 .img-tec {
     width: 30px;
     margin-right: 10px;
@@ -356,10 +294,6 @@ a {
     background: linear-gradient(black, rgb(0, 1, 10), rgb(0, 0, 39));
     text-align: center;
     align-items: center;
-}
-.projetos.dark{
-    background: linear-gradient(rgb(255, 255, 255), rgb(238, 238, 238), rgb(226, 226, 226));
-    color: black;
 }
 
 .espaco-projetos {
@@ -403,9 +337,7 @@ a {
     margin-bottom: 5px;
     color: rgb(255, 255, 255);
 }
-.title-text-project.dark{
-    color: rgb(0, 0, 0);
-}
+
 strong{
     color: #004cda;
 }
@@ -432,6 +364,41 @@ p {
 .img-projeto {
     height: 350px;
 }
+/************************************************************************************
+*********************************SERVIÇOS********************************************
+*************************************************************************************/
+
+.servicos{
+    background-color: #000714;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70vh;
+    justify-content: space-around;
+}
+
+.div-servicos{
+    width: 80vw;
+    background-color: #00318d;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.servico{
+    width: 300px;
+    height: 300px;
+    background-color: #004cda;
+}
+
+
+
+
+
+
 
 /*********************FOOTER******************************/
 
