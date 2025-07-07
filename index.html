@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header id="pag-ini">
+    <header class="pag-ini" id="pag-ini">
         <!--    Animação Estrelas   -->
         <div class="bolhas">
             <span style="--i:11"></span>
@@ -23,7 +23,7 @@
             <span style="--i:6"></span>
             <span style="--i:13"></span>
             <span style="--i:9"></span>
-            <span style="--i:11"></span>
+            <span style="--i:3"></span>
             <span style="--i:19"></span>
             <span style="--i:5"></span>
             <span style="--i:9"></span>
@@ -34,7 +34,7 @@
             <span style="--i:6"></span>
             <span style="--i:18"></span>
             <span style="--i:23"></span>
-            <span style="--i:3"></span>
+            <span style="--i:19"></span>
             <span style="--i:5"></span>
             <span style="--i:21"></span>
             <span style="--i:4"></span>
@@ -76,27 +76,27 @@
         
         <!---------------------------->
 
-        <nav id="menu">
+        <nav class="menu" id="menu">
             
             <menu id="opcoesmenu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#sobremim">Sobre Mim</a></li>
                 <li><a href="#tecnologias">Tecnologias</a></li>
                 <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#servicos">Serviços</a></li>
             </menu>
             <div class="links-social">
                 <a href="https://www.linkedin.com/in/pablo-gramos/" target="_blank"><img class="icone-social" src="img/apresentação/LinkedinW.png" alt="Linkedin"></a>
                 <a href="https://www.instagram.com/pabloramos_dev/" target="_blank"><img class="icone-social" src="img/apresentação/instagramW.png" alt="Instagram"></a>
                 <a href="https://github.com/Pablo-Vini" target="_blank"><img class="icone-social" src="img/apresentação/githubW.png" alt="GitHub"></a>
             </div>
-          
         </nav>
         <nav id="apresentacao">
             <img id="astronauta" src="img/galaxias/astronauta1.png" alt="">
             <div id="ladoesquerdo">
                 <div id="espaconome">
                     <h1 id="nome">Pablo Vinícius</h1>
-                    <h2 id="titulo">Desenvolvedor de Software</h2>
+                    <h2 id="h2-titulo">Desenvolvedor de Software</h2>
                     <p id="textoapresentacao">Olá, sou programador atuando como Freelancer na criação de sistemas web com o  objetivo de transformar sua visão em uma experiência funcional e impactante.</p>
                 </div>
             </div>
@@ -106,9 +106,9 @@
         </nav>
     </header>
 
-    <section id="sobremim">
-        <h1>Sobre mim</h1>
-        <p id="textosobremim">Sou programador apaixonado por transformar ideias em soluções digitais inovadoras! Com experiência sólida em projetos freelancer, tenho expertise no desenvolvimento de sites com WordPress, além de criar aplicações robustas utilizando Java, Spring e SQL. Me dedico ao aprendizado contínuo e estou sempre em busca das mais recentes tecnologias para me manter alinhado às tendências do mercado. Estou pronto para enfrentar novos desafios e contribuir para o sucesso de projetos incríveis. Vamos criar algo extraordinário juntos!</p>
+    <section id="sobremim" class="sobremim">
+        <h1 class="animacao-barra">Sobre mim<span class="barra-titulos"></span></h1>
+        <p class="textosobremim" id="textosobremim">Sou desenvolvedor freelancer com experiência em <strong>PHP</strong>, <strong>WordPress</strong>, <strong>Flutter</strong>, <strong>JavaScript</strong> e design no <strong>Canva</strong>, ofereço soluções personalizadas para quem busca qualidade, agilidade e um toque criativo. Seja um site dinâmico, um aplicativo mobile ou uma plataforma sob medida para otimizar processos, atrair mais clientes ou materializar aquela funcionalidade dos sonhos, estou pronto para levar seu projeto ao próximo nível!</p>
         <div id="div-button">
             <button class="curriculo"><a target="_blank" href="curriculo/index.html">CV Pt-Br</a></button>
             <button class="curriculo"><a target="_blank" href="curriculo/index_ingles.html">CV En</a></button>
@@ -116,31 +116,31 @@
         <img id="estrelas" src="img/galaxias/estrelas.png" alt="">
     </section>
 
-    <section id="tecnologias">
+    <section id="tecnologias" class="tecnologias">
         <img id="galaxia1" src="img/galaxias/galaxia1.png" alt="">
-        <h1 id="title-section-tec">Tecnologias</h1>
+        <h1 id="title-section-tec">Tecnologias<span class="barra-titulos"></span></h1>
         <nav class="espaco-tecnologi">
-            <div class="div-tecnologia">
+            <div id="div-tecnologia" class="div-tecnologia">
                 <img class="img-tec" src="img/conhecimentos/html.png" alt="HTML">
                 <h3 class="title-tec">HTML</h3>
             </div>
-            <div class="div-tecnologia">
+            <div id="div-tecnologia" class="div-tecnologia">
                 <img class="img-tec" src="img/conhecimentos/css.png" alt="CSS">
                 <h3 class="title-tec">CSS</h3>
             </div>
-            <div class="div-tecnologia">
+            <div id="div-tecnologia" class="div-tecnologia">
                 <img class="img-tec" src="img/conhecimentos/java-script.png" alt="javascript">
                 <h3 class="title-tec">Javascript</h3>
             </div>
-            <div class="div-tecnologia">
+            <div id="div-tecnologia" class="div-tecnologia">
                 <img class="img-tec" src="img/conhecimentos/php.png" alt="Git">
                 <h3 class="title-tec">PHP</h3>
             </div>
-            <div class="div-tecnologia">
+            <div id="div-tecnologia" class="div-tecnologia">
                 <img class="img-tec" src="img/conhecimentos/vue.png" alt="Git">
                 <h3 class="title-tec">Vue</h3>
             </div>
-            <div class="div-tecnologia">
+            <div id="div-tecnologia" class="div-tecnologia">
                 <img class="img-tec" src="img/conhecimentos/java.png" alt="Java">
                 <h3 class="title-tec">Java</h3>
             </div>
@@ -149,28 +149,28 @@
             
         </nav>
         <nav class="espaco-tecnologi">
-            <div class="div-tecnologia">
+            <div id="div-tecnologia" class="div-tecnologia">
                 <img class="img-tec" src="img/conhecimentos/mysql.png" alt="MySQL">
                 <h3 class="title-tec">MySQL</h3>
             </div>
-            <div class="div-tecnologia">
+            <div id="div-tecnologia" class="div-tecnologia">
                 <img class="img-tec" src="img/conhecimentos/wordpress.png" alt="WordPress">
                 <h3 class="title-tec">WordPress</h3>
             </div>
-            <div class="div-tecnologia">
+            <div id="div-tecnologia" class="div-tecnologia">
                 <img class="img-tec" src="img/conhecimentos/sql-server.png" alt="sql server">
                 <h3 class="title-tec">SQL Server</h3>
             </div>
-            <div class="div-tecnologia">
+            <div id="div-tecnologia" class="div-tecnologia">
                 <img class="img-tec" src="img/conhecimentos/git.png" alt="Git">
                 <h3 class="title-tec">Git</h3>
             </div>
             
-            <div class="div-tecnologia">
+            <div id="div-tecnologia" class="div-tecnologia">
                 <img class="img-tec" src="img/conhecimentos/Spring.png" alt="spring">
                 <h3 class="title-tec">Spring</h3>
             </div>
-            <div class="div-tecnologia">
+            <div id="div-tecnologia" class="div-tecnologia">
                 <img class="img-tec" src="img/conhecimentos/python.png" alt="Python">
                 <h3 class="title-tec">Python</h3>
             </div>
@@ -179,16 +179,16 @@
         <img id="galaxia3" src="img/galaxias/galaxia3.png" alt="">
     </section>
 
-    <section id="projetos">
-        <h1 id="title-projetc">Projetos</h1>
+    <section id="projetos" class="projetos">
+        <h1 id="title-projetc">Projetos<span class="barra-titulos"></span></h1>
         <nav class="espaco-projetos">
             <div class="div-projeto">
                 <div class="text-projeto">
-                    <h3 class="title-text-project">Site para casamento</h3>
-                    <p>Este foi o site desenvolvido para meu casamento realizado em 04/07/2024, utilizando <strong>HTML</strong>, <strong>CSS</strong> e <strong>Javascript</strong>.</p>
+                    <h3 class="title-text-project">Site Master Clean</h3>
+                    <p>Site desenvolvido para empresa localizada em Londres utilizando <strong>Wordpress</strong>, <strong>Elementor</strong> e <strong>Canva</strong>, com o intuito de ter presença online e facilitar agendamento de pedidos.</p>
                     <div class="links-deploy">
-                        <a class="a-deploy" target="_blank" href="https://bia-pablo.netlify.app/">Deploy</a>
-                        <a class="a-deploy" target="_blank" href="https://github.com/Pablo-Vini/SiteCasamento">Repositório</a>
+                        <a class="a-deploy" target="_blank" href="https://bia-pablo.netlify.app/">Ver Projeto</a>
+                        <a class="a-deploy" target="_blank" href="https://github.com/Pablo-Vini/SiteCasamento">Ver Código</a>
                     </div>
                 </div>
                 <img class="img-projeto" src="img/projetos/1.png" alt="Projeto 1">
@@ -196,10 +196,10 @@
 
             <div class="div-projeto">
                 <div class="text-projeto">
-                    <h3 class="title-text-project">Site para Loja Palmas Impressoras</h3>
-                    <p>Site desenvolvido em <strong>Wordpress</strong> e <strong>Elementor</strong> para comercio local chamado Palmas Impressoras, foi realizado cadastro de produtos e a criação de artes para o site com o <strong>Canva</strong>, o site é responsivo tendo banners personalizados para cada tipo de aparelho.</p>
+                    <h3 class="title-text-project">Site Palmas Impressoras</h3>
+                    <p>Site desenvolvido em <strong>Wordpress</strong> e <strong>Elementor</strong> para comercio local chamado Palmas Impressoras, com cadastro de produtos e a criação de artes para o site com o <strong>Canva</strong>.</p>
                     <div class="links-deploy">
-                        <a class="a-deploy" target="_blank" href="https://palmasimpressoras.com.br/">Deploy</a>
+                        <a class="a-deploy" target="_blank" href="https://palmasimpressoras.com.br/">Ver Projeto</a>
                     </div>
                 </div>
                 <img class="img-projeto" src="img/projetos/2.png" alt="Projeto 1">
@@ -207,10 +207,10 @@
 
             <div class="div-projeto">
                 <div class="text-projeto">
-                    <h3 class="title-text-project">Site para loja Meta Cromo</h3>
+                    <h3 class="title-text-project">Site Meta Cromo</h3>
                     <p>Site para comercio local chamado Meta Cromo, utilizando <strong>Wordpress</strong> e <strong>Elementor</strong> criei um site responsívo com diversos produtos cadastrados.</p>
                     <div class="links-deploy">
-                        <a class="a-deploy" target="_blank" href="https://metacromo.net.br/">Deploy</a>
+                        <a class="a-deploy" target="_blank" href="https://metacromo.net.br/">Ver Projeto</a>
                     </div>
                 </div>
                 <img class="img-projeto" src="img/projetos/3.png" alt="Projeto 1">
@@ -218,10 +218,10 @@
 
             <div class="div-projeto">
                 <div class="text-projeto">
-                    <h3 class="title-text-project">Site para portfólio Unigeo</h3>
+                    <h3 class="title-text-project">Site Unigeo</h3>
                     <p>Site de portfólio de serviços ambientais para empresa Unigeo, utilizando <strong>Wordpress</strong> e <strong>Elementor</strong> o site ficou responsivo e de acordo com a identidade visual da empresa.</p>
                     <div class="links-deploy">
-                        <a class="a-deploy" target="_blank" href="https://unigeo.netsites.net.br">Deploy</a>
+                        <a class="a-deploy" target="_blank" href="https://unigeo.netsites.net.br">Ver Projeto</a>
                     </div>
                 </div>
                 <img class="img-projeto" src="img/projetos/4.png" alt="Projeto 1">
@@ -232,7 +232,7 @@
                     <h3 class="title-text-project">Reconhecimento facial</h3>
                     <p>Programa de detecção e reconhecimento facial com <strong>Python</strong> e <strong>OpenGL</strong>, o programa captura as fotos da face, treina, detecta a face, compara com as imagens cadastradas e apresenta o grau de confiabilidade.</p>
                     <div class="links-deploy">
-                        <a class="a-deploy" target="_blank" href="https://github.com/Pablo-Vini/Reconhecimento-Facial">Repositório</a>
+                        <a class="a-deploy" target="_blank" href="https://github.com/Pablo-Vini/Reconhecimento-Facial">Ver Código</a>
                     </div>
                 </div>
                 <img class="img-projeto" src="img/projetos/5.png" alt="Projeto 1">
@@ -243,7 +243,7 @@
                     <h3 class="title-text-project">CRUD Spring Boot</h3>
                     <p>Projeto de CRUD utiliando <strong>Spring Boot</strong> e <strong>MySQL</strong>, seguindo o padrão para criação de <strong>API RESTful</strong> utilizando a IDE <strong>STS</strong> e o Postman para monitoramento de dados.</p>
                     <div class="links-deploy">
-                        <a class="a-deploy" target="_blank" href="https://github.com/Pablo-Vini/Projeto_CRUD_Spring">Repositório</a>
+                        <a class="a-deploy" target="_blank" href="https://github.com/Pablo-Vini/Projeto_CRUD_Spring">Ver Código</a>
                     </div>
                 </div>
                 <img class="img-projeto" src="img/projetos/6.png" alt="Projeto 1">
@@ -251,10 +251,50 @@
         </nav>
         
     </section>
+    <section class="servicos" id="servicos">
+        <div>
+            <h1>Meus Serviços<span class="barra-titulos"></span></h1>
+        </div>
+        <div class="div-servicos">
+            <img class="luz-servicos" src="img/galaxias/luz.png" alt="">
+            <div class="servico">
+                <div class="titulo-imagem-servico">
+                    <img class="imagem-servico" src="img/Serviços/sistemas.png" alt="Sistemas">
+                    <h2 class="h2-servico">Desenvolvimento de software</h2>
+                </div>
+                <p class="p-servicos">Criação de aplicações web sob medida, com foco em escalabilidade, segurança e usabilidade. Integro back-end robusto e front-end intuitivo para transformar processos de negócio em soluções digitais eficientes.</p>
+            </div>
 
+            <div class="servico">
+                <div class="titulo-imagem-servico">
+                    <img class="imagem-servico" src="img/Serviços/sites.png" alt="Sites">
+                    <h2 class="h2-servico">Criação de sites</h2>
+                </div>
+                <p class="p-servicos">Desenvolvimento de sites responsivos e visualmente atraentes, alinhados à identidade da sua marca. Otimização para SEO e performance, garantindo uma experiência fluida em qualquer dispositivo.</p>
+            </div>
+
+            <div class="servico">
+                <div class="titulo-imagem-servico">
+                    <img class="imagem-servico" src="img/Serviços/aplicativo-movel.png" alt="Aplicativo">
+                    <h2 class="h2-servico">Criação de aplicativos</h2>
+                </div>
+                <p class="p-servicos">Design e implementação de apps nativos e híbridos para Android e iOS. Priorizo interfaces intuitivas e integração com APIs, visando alta performance e engajamento do usuário.</p>
+            </div>
+
+            <div class="servico">
+                <div class="titulo-imagem-servico">
+                    <img class="imagem-servico" src="img/Serviços/trafego.png" alt="Trafego">
+                    <h2 class="h2-servico">Trafego pago</h2>
+                </div>
+                <p class="p-servicos">Planejamento e gestão de campanhas pagas em Google Ads e redes sociais (Facebook, Instagram, LinkedIn), com segmentação precisa e análise de resultados em tempo real para maximizar ROI e gerar leads qualificados.</p>
+            </div>
+        </div>
+        
+    </section>
     <footer>
         
         <p id="Copyright">Copyright © 2025 - por Pablo Vinícius</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
