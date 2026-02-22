@@ -3,6 +3,13 @@
     margin: 0;
 }
 
+@font-face {
+    font-family: 'FonteTitulo';
+    src: url('static/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -39,7 +46,7 @@ body {
     width: 800px;
     left: 5px;
     margin-top: -400px;
-    z-index: 3;
+    z-index: 0;
 }
 
 #galaxia2 {
@@ -47,7 +54,7 @@ body {
     width: 400px;
     right: 250px;
     margin-top: 0px;
-    z-index: 3;
+    z-index: 1;
 }
 
 #galaxia3 {
@@ -63,6 +70,29 @@ body {
     left: 15px;
     width: 400px;
     top: 40vh;
+    animation: astro 3s linear infinite;
+}
+
+@keyframes astro {
+    0% {
+        top: 40vh;
+    }
+
+    25%{
+        top: 38vh;
+    }
+
+    50%{
+        top: 36vh;
+    }
+
+    75%{
+        top: 38vh;
+    }
+
+    100% {
+        top: 40vh;
+    }
 }
 
 #estrelas {
@@ -86,23 +116,7 @@ header {
 
 h1 {
     font-size: 40pt;
-    text-decoration: none #f4ff95;
-    transition: 1s;
-}
-
-h1:hover {
-    transition: 1s;
-    animation: barra .5s step-end;
-}
-
-@keyframes barra {
-    0% {
-        text-decoration: none #f4ff95;
-    }
-
-    100% {
-        text-decoration: underline #f4ff95;
-    }
+    font-family: 'FonteTitulo';
 }
 
 
@@ -181,7 +195,13 @@ a {
 
 .icone-social {
     width: 50px;
+    transition: 1s;
 }
+.icone-social:hover {
+    width: 48px;
+    transition: 1s;
+}
+
 
 .link-icone{
     border-radius: 50%;
@@ -190,7 +210,7 @@ a {
 }
 .link-icone:hover{
     transition: 1s;
-    background-color: #3c91ff;
+    top: 20px;
 }
 
 /*----------------ANIMAÇÃO BOLHAS--------------*/
@@ -242,18 +262,18 @@ a {
 }
 
 #espaconome {
-    width: 500px;
+    width: 80%;
     text-align: left;
     height: 300px;
     z-index: 2;
 }
 
 #h2-titulo {
-    color: #3c91ff;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    color: #26bfd8;
+    margin-top: 15px;
+    margin-bottom: 15px;
     z-index: 2;
-    font-size: 25pt;
+    font-size: 22pt;
     width: 460px;
 
     border-right: 10px solid #f4ff95;
@@ -312,6 +332,7 @@ a {
 }
 
 #foto {
+    height: 25vw;
     width: 25vw;
     margin-top: 5vh;
     border-radius: 50%;
@@ -344,7 +365,8 @@ a {
     margin-left: 10px;
     margin-right: 10px;
     font-size: 14pt;
-    width: 150px;
+    padding-left: 15px;
+    padding-right: 15px;
     height: 30px;
     background-color: black;
     border: none;
@@ -601,391 +623,3 @@ footer {
 
 
 
-/****************************************************************************
-***********************************************************************
-**********************************************
-************************
-****    RESPONSIVIDADE 1
-*/
-
-
-@media only screen and (max-device-width: 1100px) {
-    h1 {
-        font-size: 25pt;
-    }
-
-    h2 {
-        font-size: 15pt;
-    }
-
-    p {
-        font-size: 13pt;
-    }
-}
-
-
-/****************************************************************************
-***********************************************************************
-**********************************************
-************************
-****    RESPONSIVIDADE 2
-*/
-
-@media only screen and (max-device-width: 900px) {
-
-    #menu {
-        height: 60px;
-        width: 100vw;
-        background-color: rgb(19, 19, 19, 50%);
-        position: fixed;
-        backdrop-filter: blur(13.5px);
-        z-index: 30;
-    }
-
-    #opcoesmenu {
-        margin-top: 10px;
-        margin-left: 0px;
-        font-size: 9pt;
-        font-weight: bold;
-        display: flex;
-        justify-content: space-around;
-        width: 100vw;
-    }
-
-    .links-social {
-        display: flex;
-        justify-content: space-around;
-        width: 100px;
-        height: 50px;
-        position: absolute;
-        right: 10px;
-        top: 35px;
-    }
-
-    .icone-social {
-        width: 25px;
-    }
-
-    #apresentacao {
-        display: block;
-        padding-top: 200px;
-    }
-
-    #ladoesquerdo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100vw;
-    }
-
-    #espaconome {
-        width: 80vw;
-        text-align: left;
-        height: 80%;
-    }
-
-    #h2-titulo {
-        font-size: 15pt;
-    }
-
-    #ladodireito {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        text-align: center;
-        justify-content: center;
-        width: 90vw;
-    }
-
-    #foto {
-        width: 55vw;
-        margin-top: 5vh;
-        border-radius: 50%;
-        z-index: 2;
-    }
-
-    /********************** ILUSTRAÇÕES GALAXIAS ******************************/
-
-    #galaxia1 {
-        position: absolute;
-        width: 250px;
-        left: 5px;
-        margin-top: -150px;
-        z-index: 2;
-    }
-
-    #galaxia2 {
-        position: absolute;
-        width: 100px;
-        right: 0px;
-        margin-top: -90px;
-        z-index: 3;
-    }
-
-    #galaxia3 {
-        position: absolute;
-        width: 70vw;
-        left: 5px;
-        margin-top: 600px;
-        z-index: 3;
-    }
-
-    #astronauta {
-        position: absolute;
-        left: auto;
-        right: 5px;
-        width: 150px;
-        top: 70px;
-    }
-
-    #estrelas {
-        position: absolute;
-        width: 80vw;
-        left: 0px;
-        margin-top: 0px;
-    }
-
-    /**********************************************************/
-    #div-button {
-        z-index: 100;
-    }
-
-    .textosobremim {
-        font-size: 12pt;
-    }
-
-    .curriculo {
-        margin-top: 40px;
-        margin-left: 10px;
-        margin-right: 10px;
-        font-size: 14pt;
-        padding: 4px;
-        width: 150px;
-        background-color: black;
-        border: none;
-        box-shadow: 0px 0px 1px white;
-        z-index: 300;
-    }
-
-    /**********************************************************/
-    #tecnologias {
-        height: 100vh;
-        background-color: rgb(0, 0, 0);
-        justify-content: center;
-        text-align: center;
-        padding-top: 100px;
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .espaco-tecnologi {
-        margin-top: 70px;
-        display: block;
-        justify-content: center;
-        align-items: center;
-        gap: 0%;
-        height: 60vh;
-    }
-
-    .div-tecnologia {
-        background-color: rgb(0, 0, 0);
-        display: flex;
-        padding-top: auto;
-        margin: 10px;
-        padding-bottom: auto;
-        height: 60px;
-        width: 140px;
-        align-items: center;
-        justify-content: center;
-        border-radius: 5px;
-        box-shadow: 0px 0px 3px rgb(255, 255, 255);
-        transition: 1s;
-    }
-
-    .div-tecnologia:hover {
-        box-shadow: 0px 0px 8px rgb(255, 255, 255);
-        transition: 0.5s;
-    }
-
-    .img-tec {
-        width: 30px;
-        margin-right: 10px;
-    }
-
-    .title-tec {
-        font-size: 12pt;
-    }
-
-    #title-section-tec {
-        position: absolute;
-    }
-
-    /************************************************************/
-    #sobremim {
-        height: 100vh;
-        padding-left: 2vw;
-        padding-right: 2vw;
-    }
-
-    #textosobremim {
-        margin-top: 50px;
-        font-size: 11pt;
-    }
-
-    /************************************************************/
-    #title-projetc {
-        margin-bottom: 100px;
-    }
-
-    .div-projeto {
-        display: block;
-        justify-content: center;
-        height: 400px;
-        width: 90vw;
-        margin-bottom: 150px;
-    }
-
-    .text-projeto {
-        width: 100%;
-        display: block;
-        align-items: center;
-        text-align: center;
-    }
-
-    .title-text-project {
-        font-size: 19pt;
-        margin-bottom: 5px;
-        color: rgb(255, 255, 255);
-    }
-
-    p {
-        color: #bdbdbd;
-    }
-
-    .links-deploy {
-        display: flex;
-        justify-content: center;
-        height: 70px;
-        align-items: center;
-        font-size: 12pt;
-    }
-
-    .a-deploy {
-        margin: 5px;
-        box-shadow: 0px 0px 3px white;
-        padding: 5px;
-        align-items: center;
-    }
-
-
-    /*********************** PROJETOS ******************************/
-
-
-    #title-projetc {
-        margin-bottom: 100px;
-    }
-
-    .div-projeto {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        height: 430px;
-        width: 100%;
-        margin-bottom: 50px;
-    }
-
-    .text-projeto {
-        width: 95%;
-        font-size: 12pt;
-        height: 300px;
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        justify-content: center;
-        padding-left: 10px;
-    }
-
-    .title-text-project {
-        font-size: 17pt;
-        margin-bottom: 10px;
-        color: rgb(255, 255, 255);
-    }
-
-
-
-    .img-projeto {
-        height: 250px;
-        margin-top: -60px;
-    }
-
-    /************************************************************************************
-*********************************SERVIÇOS********************************************
-*************************************************************************************/
-
-    .servicos {
-        background: linear-gradient(rgb(0, 0, 39), rgb(0, 1, 10), black);
-        display: flex;
-        position: relative;
-        flex-direction: column;
-        align-items: center;
-        height: 100vh;
-        justify-content: space-around;
-        overflow: hidden;
-    }
-
-    .div-servicos {
-        width: 97vw;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        padding-bottom: 20px;
-        padding-top: 20px;
-    }
-
-    .servico {
-        width: 48%;
-        height: 250px;
-        padding: 2px;
-        border-radius: 10px;
-        box-shadow: 0px 0px 2px white;
-        transition: 2s;
-        z-index: 12;
-        margin-bottom: 10px;
-    }
-
-    
-    .titulo-imagem-servico {
-        background-color: #002f86;
-        border-radius: 10px;
-        display: flex;
-        height: 80px;
-        justify-content: space-around;
-        align-items: center;
-        margin-bottom: 10px;
-    }
-
-    .imagem-servico {
-        height: 35px;
-    }
-
-    .h2-servico {
-        font-size: 1em;
-        width: 100px;
-    }
-
-    .p-servicos{
-        font-size: 9pt;
-    }
-
-
-    /******************************************************************************************/
-    footer {
-        height: 80px;
-    }
-
-    #Copyright {
-        font-size: 10pt;
-    }
-}
