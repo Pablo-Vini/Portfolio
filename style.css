@@ -39,7 +39,11 @@ body {
     /*transition: background 0.2s linear;*/
 }
 
-.titulo-secao{
+img {
+    pointer-events: none;
+}
+
+.titulo-secao {
     font-family: 'FonteTitulo';
 }
 
@@ -61,11 +65,13 @@ body {
     z-index: 1;
     animation: planeta 100s linear infinite;
 }
+
 @keyframes planeta {
-    from{
+    from {
         transform: rotate(0deg);
     }
-    to{
+
+    to {
         transform: rotate(360deg);
     }
 }
@@ -91,15 +97,15 @@ body {
         top: 45vh;
     }
 
-    25%{
+    25% {
         top: 43vh;
     }
 
-    50%{
+    50% {
         top: 41vh;
     }
 
-    75%{
+    75% {
         top: 43vh;
     }
 
@@ -191,7 +197,8 @@ a {
     color: white;
     transition: .4s;
 }
-.menu-link:hover{
+
+.menu-link:hover {
     border-bottom: solid 3px #01fdf5;
     transition: .4s;
 }
@@ -211,12 +218,13 @@ a {
     will-change: transform;
     transition: transform 0.3s ease;
 }
+
 .icone-social:hover {
     transform: scale(1.1);
 }
 
 
-.link-icone{
+.link-icone {
     border-radius: 50%;
     transition: 1s;
 }
@@ -370,7 +378,7 @@ a {
     z-index: 30;
 }
 
-.btn_cta{
+.btn_cta {
     margin-top: 40px;
     margin-left: 10px;
     margin-right: 10px;
@@ -384,7 +392,8 @@ a {
     z-index: 60;
     transition: .5s;
 }
-.btn_cta:hover{
+
+.btn_cta:hover {
     box-shadow: 0px 0px 10px rgb(136, 136, 136);
     transition: .5s;
 }
@@ -476,12 +485,12 @@ a {
     flex-wrap: wrap;
     justify-content: space-around;
     padding-bottom: 100px;
-    
+
 }
 
 #title-projetc {
     margin-bottom: 150px;
-    
+
 }
 
 .div-projeto {
@@ -497,7 +506,8 @@ a {
     border-radius: 10px;
     transition: .5s;
 }
-.div-projeto:hover{
+
+.div-projeto:hover {
     box-shadow: #01fdf5 0px 0px 10px;
     transition: .5s;
 }
@@ -547,7 +557,6 @@ p {
     border: none;
     border-radius: 45px;
     box-shadow: 0px 0px 0px rgb(80, 80, 80);
-    z-index: 60;
     transition: .5s;
 }
 
@@ -597,7 +606,7 @@ p {
     z-index: 12;
 }
 
-.p-servicos{
+.p-servicos {
     padding: 5px;
 }
 
@@ -676,7 +685,7 @@ footer {
 
 /************************************************************************************************/
 
-.contato{
+.contato {
     display: flex;
     height: 75vh;
     justify-content: center;
@@ -694,11 +703,16 @@ footer {
 }
 
 @keyframes moveStars {
-    from { background-position: 0 0; }
-    to { background-position: 5000px -1000px; }
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 5000px -1000px;
+    }
 }
 
-h3{
+h3 {
     font-size: 25pt;
 }
 
@@ -719,6 +733,7 @@ h3{
     box-shadow: 0 0 7px rgb(129, 129, 129);
     transition: 1s;
 }
+
 .space-form:hover {
     backdrop-filter: blur(0px);
     box-shadow: 0 0 12px #01fdf5;
@@ -759,10 +774,10 @@ h3{
 }
 
 /* Efeito flutuante */
-.input-group input:focus ~ label,
-.input-group input:valid ~ label,
-.input-group textarea:focus ~ label,
-.input-group textarea:valid ~ label {
+.input-group input:focus~label,
+.input-group input:valid~label,
+.input-group textarea:focus~label,
+.input-group textarea:valid~label {
     top: -5px;
     font-size: 12px;
     color: #01fdf5;
@@ -776,7 +791,7 @@ h3{
 
 /* Botão */
 .btn_submit {
-    
+
     padding: 12px;
     background: linear-gradient(#01fdf5, #003B46, #006679);
     border: none;
@@ -791,4 +806,81 @@ h3{
 
 .btn_submit:hover {
     box-shadow: 0 0 5px #ececec;
+}
+
+/********************************************************************
+**********************************************************************/
+.feedbacks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70vh;
+    text-align: center;
+    align-items: center;
+}
+
+.container-feedbacks {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin-top: 100px;
+}
+
+/* Card de Feedback */
+.card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 300px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Estrelas */
+.starsfd {
+    color: #FFD700;
+    /* Cor Dourada */
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+}
+
+/* Texto do Depoimento */
+.feedback-text {
+    color: #555;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+/* Informações do Autor */
+.author-info {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.name {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.company {
+    display: block;
+    color: #888;
+    font-size: 0.85rem;
+    margin-top: 2px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
