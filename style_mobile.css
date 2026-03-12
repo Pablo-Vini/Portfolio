@@ -29,14 +29,9 @@
 */
 
 @media only screen and (max-device-width: 900px) {
-
-    #menu {
-        height: 60px;
-        width: 100vw;
-        background-color: rgb(19, 19, 19, 50%);
-        position: fixed;
-        backdrop-filter: blur(13.5px);
-        z-index: 30;
+    .menu {
+        height: 65px;
+        background-color: rgba(173, 173, 173, 0.233);
     }
 
     #opcoesmenu {
@@ -52,9 +47,8 @@
     .links-social {
         display: flex;
         justify-content: space-around;
-        width: 100px;
+        width: 150px;
         height: 50px;
-        position: absolute;
         right: 10px;
         top: 35px;
     }
@@ -65,7 +59,7 @@
 
     #apresentacao {
         display: block;
-        padding-top: 200px;
+        padding-top: 150px;
     }
 
     #ladoesquerdo {
@@ -85,20 +79,36 @@
         font-size: 15pt;
     }
 
+    .ctas {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .btn_cta {
+        font-size: 11pt;
+    }
+
+    .curriculo {
+        font-size: 11pt;
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
     #ladodireito {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         text-align: center;
-        justify-content: center;
-        width: 90vw;
+        justify-content: right;
+        width: 97vw;
+        height: 200px;
     }
 
     #foto {
-        width: 55vw;
+        width: 50vw;
+        height: auto;
         margin-top: 5vh;
-        border-radius: 50%;
-        z-index: 2;
     }
 
     /********************** ILUSTRAÇÕES GALAXIAS ******************************/
@@ -107,15 +117,15 @@
         position: absolute;
         width: 250px;
         left: 5px;
-        margin-top: -150px;
+        margin-top: -350px;
         z-index: 2;
     }
 
     #galaxia2 {
         position: absolute;
         width: 100px;
-        right: 0px;
-        margin-top: -90px;
+        right: 10px;
+        margin-top: -150px;
         z-index: 3;
     }
 
@@ -128,11 +138,31 @@
     }
 
     #astronauta {
-        position: absolute;
-        left: auto;
-        right: 5px;
-        width: 150px;
-        top: 70px;
+        left: 20px;
+        width: 35vw;
+        animation: astro 4s linear infinite;
+    }
+
+    @keyframes astro {
+        0% {
+            top: 65vh;
+        }
+
+        25% {
+            top: 63vh;
+        }
+
+        50% {
+            top: 58vh;
+        }
+
+        75% {
+            top: 62vh;
+        }
+
+        100% {
+            top: 65vh;
+        }
     }
 
     #estrelas {
@@ -166,7 +196,7 @@
 
     /**********************************************************/
     #tecnologias {
-        height: 100vh;
+        height: 70vh;
         background-color: rgb(0, 0, 0);
         justify-content: center;
         text-align: center;
@@ -194,14 +224,11 @@
         width: 140px;
         align-items: center;
         justify-content: center;
-        border-radius: 5px;
-        box-shadow: 0px 0px 3px rgb(255, 255, 255);
-        transition: 1s;
+        transition: .5s;
     }
 
     .div-tecnologia:hover {
-        box-shadow: 0px 0px 8px rgb(255, 255, 255);
-        transition: 0.5s;
+        transform: translateY(-10px);
     }
 
     .img-tec {
@@ -230,16 +257,31 @@
     }
 
     /************************************************************/
+    .projetos {
+        display: flex;
+        flex-direction: column;
+        padding-top: 100px;
+        background: linear-gradient(black, rgb(0, 1, 10), rgb(0, 0, 39));
+        text-align: center;
+        align-items: center;
+    }
+
     #title-projetc {
         margin-bottom: 100px;
+        font-size: 14pt;
     }
 
     .div-projeto {
-        display: block;
-        justify-content: center;
-        height: 400px;
-        width: 90vw;
-        margin-bottom: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 550px;
+        width: 400px;
+        padding: 10px;
+        margin-bottom: 100px;
+        box-shadow: white 0px 0px 5px;
+        border-radius: 10px;
     }
 
     .text-projeto {
@@ -253,6 +295,11 @@
         font-size: 19pt;
         margin-bottom: 5px;
         color: rgb(255, 255, 255);
+    }
+
+    .img-projeto {
+        width: 90%;
+        margin-bottom: -30px;
     }
 
     p {
@@ -273,10 +320,6 @@
         padding: 5px;
         align-items: center;
     }
-
-
-    /*********************** PROJETOS ******************************/
-
 
     #title-projetc {
         margin-bottom: 100px;
@@ -352,7 +395,7 @@
         margin-bottom: 10px;
     }
 
-    
+
     .titulo-imagem-servico {
         background-color: #002f86;
         border-radius: 10px;
@@ -368,16 +411,78 @@
     }
 
     .h2-servico {
-        font-size: 1em;
-        width: 100px;
+        font-size: .8em;
+        width: 140px;
     }
 
-    .p-servicos{
+    .p-servicos {
         font-size: 9pt;
     }
 
+    .container-feedbacks {
+        gap: 5px;
+        height: 80vh;
+        padding: 5px;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 400px;
+        margin-top: 100px;
+        display: flex;
+        position: relative;
+        flex-direction: inherit;
+        justify-content: space-around;
+        overflow: hidden;
+    }
+
+    .card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        width: 40%;
+    }
+
+    /* Estrelas */
+    .starsfd {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .feedback-text {
+        line-height: 1.5;
+        margin-bottom: 10px;
+        font-size: 0.7rem;
+    }
+
+    .author-info {
+        padding-top: 10px;
+    }
+
+    .name {
+        display: block;
+        font-weight: bold;
+        color: #333;
+        font-size: 1rem;
+    }
+
+    .company {
+        display: block;
+        color: #888;
+        font-size: 0.7rem;
+        margin-top: 2px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
 
     /******************************************************************************************/
+
+    h3{
+        font-size: 20pt;
+    }
+    .space-form {
+        width: 250px;
+    }
+
     footer {
         height: 80px;
     }

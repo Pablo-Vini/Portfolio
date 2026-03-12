@@ -18,25 +18,12 @@ html {
     scroll-margin-top: .8em;
 }
 
-body,
-.div-tecnologia,
-.pag-ini,
-#textosobremim,
-#menu,
-#sobremim,
-#tecnologias,
-#projetos {
-    transition: background-color 1s ease, color 1s ease;
-}
-
 body {
     background-color: rgb(0, 0, 0);
     align-items: center;
     justify-content: center;
     color: white;
     font-family: 'Lato', sans-serif;
-
-    /*transition: background 0.2s linear;*/
 }
 
 img {
@@ -96,19 +83,15 @@ img {
     0% {
         top: 45vh;
     }
-
     25% {
         top: 43vh;
     }
-
     50% {
         top: 41vh;
     }
-
     75% {
         top: 43vh;
     }
-
     100% {
         top: 45vh;
     }
@@ -123,7 +106,6 @@ img {
 }
 
 /********************** HEADER ******************************/
-
 header {
     position: relative;
     height: 120vh;
@@ -132,26 +114,9 @@ header {
     color: white;
 }
 
-
 h1 {
     font-size: 40pt;
     font-family: 'FonteTitulo';
-}
-
-
-.barra-titulos {
-    bottom: 0px;
-    left: 0;
-    width: 0px;
-    height: 10px;
-    background-color: #f4ff95;
-    display: block;
-    transition: width 0.5s ease;
-}
-
-h1.barra-titulos:hover {
-    width: 100px;
-    transition: width 1s ease;
 }
 
 h2 {
@@ -206,10 +171,10 @@ a {
 .links-social {
     display: flex;
     justify-content: space-around;
-    width: 300px;
+    width: 20%;
     height: 50px;
     position: absolute;
-    right: 250px;
+    right: 200px;
     top: 35px;
 }
 
@@ -223,21 +188,21 @@ a {
     transform: scale(1.1);
 }
 
-
 .link-icone {
     border-radius: 50%;
     transition: 1s;
+    transition: transform 0.3s ease;
+}
+.link-icone:hover {
+    transform: scale(1.1);
 }
 
-
 /*----------------ANIMAÇÃO BOLHAS--------------*/
-
 .bolhas {
     position: absolute;
     z-index: 0;
     display: flex;
 }
-
 .bolhas span {
     height: 3px;
     width: 3px;
@@ -247,7 +212,6 @@ a {
     box-shadow: 0 0 10px 2px #ffecb0ce;
     animation: animar calc(200s / var(--i)) linear infinite;
 }
-
 @keyframes animar {
     0% {
         transform: translateY(120vh) scale(0);
@@ -257,13 +221,10 @@ a {
         transform: translateY(-10vh) scale(1);
     }
 }
-
 .bolhas span:nth-of-type(even) {
     background: rgb(255, 255, 255);
     box-shadow: 0 0 10px 3px #ffffffc5;
 }
-
-/*****************************************************/
 
 #apresentacao {
     display: flex;
@@ -292,7 +253,6 @@ a {
     z-index: 2;
     font-size: 22pt;
     width: 460px;
-
     border-right: 10px solid #f4ff95;
     white-space: nowrap;
     overflow: hidden;
@@ -300,7 +260,6 @@ a {
 }
 
 /***********ANIMAÇÃO DIGITANDO NO TITULO**********************/
-
 @keyframes mark {
     50% {
         border-right-color: transparent;
@@ -313,11 +272,11 @@ a {
     }
 
     20% {
-        width: 26ch;
+        width: 24ch;
     }
 
     70% {
-        width: 26ch;
+        width: 24ch;
     }
 
     85% {
@@ -328,17 +287,10 @@ a {
         width: 0;
     }
 }
-
-
-
-
 /*****************************************************************/
-
-
 #textoapresentacao {
     text-align: left;
 }
-
 #ladodireito {
     display: flex;
     flex-direction: row;
@@ -347,7 +299,6 @@ a {
     justify-content: center;
     width: 50vw;
 }
-
 #foto {
     height: 25vw;
     width: 25vw;
@@ -355,10 +306,7 @@ a {
     border-radius: 50%;
     z-index: 2;
 }
-
-
 /*********************** SOBRE MIM ******************************/
-
 .sobremim {
     height: 70vh;
     background: linear-gradient(rgb(0, 0, 39), rgb(0, 1, 10), black);
@@ -411,14 +359,11 @@ a {
     z-index: 60;
     transition: .4s;
 }
-
 .curriculo:hover {
     transition: .4s;
     box-shadow: 0px 0px 10px rgb(143, 143, 143);
 }
-
 /*********************** TECNOLOGIAS ******************************/
-
 .tecnologias {
     height: 100vh;
     background-color: rgb(0, 0, 0);
@@ -452,23 +397,17 @@ a {
     will-change: transform;
     transition: transform 0.3s ease;
 }
-
-
 .div-tecnologia:hover {
     transform: translateY(-10px);
 }
-
 .img-tec {
     width: 30px;
     margin-right: 10px;
 }
-
 .title-tec {
     font-size: 13pt;
 }
-
 /*********************** PROJETOS ******************************/
-
 .projetos {
     display: flex;
     flex-direction: column;
@@ -477,7 +416,6 @@ a {
     text-align: center;
     align-items: center;
 }
-
 .espaco-projetos {
     width: 95vw;
     display: flex;
@@ -485,14 +423,11 @@ a {
     flex-wrap: wrap;
     justify-content: space-around;
     padding-bottom: 100px;
-
 }
 
 #title-projetc {
     margin-bottom: 150px;
-
 }
-
 .div-projeto {
     display: flex;
     flex-direction: column;
@@ -506,12 +441,10 @@ a {
     border-radius: 10px;
     transition: .5s;
 }
-
 .div-projeto:hover {
     box-shadow: #01fdf5 0px 0px 10px;
     transition: .5s;
 }
-
 .text-projeto {
     display: flex;
     flex-direction: column;
@@ -519,23 +452,19 @@ a {
     justify-content: space-evenly;
     padding: 5px;
 }
-
 .title-text-project {
     font-size: 20pt;
     margin-bottom: 5px;
     font-family: 'FonteTitulo';
     color: rgb(255, 255, 255);
 }
-
 strong {
     color: #01fdf5;
 }
-
 p {
     color: #bdbdbd;
     font-size: 14pt;
 }
-
 .links-deploy {
     display: flex;
     justify-content: space-around;
@@ -544,8 +473,6 @@ p {
     align-items: center;
     font-size: 12pt;
 }
-
-
 .a-deploy {
     background: linear-gradient(#01fdf5, #003B46, #006679);
     margin-top: 5px;
@@ -559,22 +486,16 @@ p {
     box-shadow: 0px 0px 0px rgb(80, 80, 80);
     transition: .5s;
 }
-
 .a-deploy:hover {
     box-shadow: 0px 0px 5px rgb(143, 143, 143);
     transition: 0.5s;
 }
-
 .img-projeto {
     width: 100%;
     margin-top: -70px;
     margin-bottom: -70px;
 }
-
-/************************************************************************************
-*********************************SERVIÇOS********************************************
-*************************************************************************************/
-
+/********************************SERVIÇOS********************************************/
 .servicos {
     background: linear-gradient(rgb(0, 0, 39), rgb(0, 1, 10), black);
     display: flex;
@@ -585,7 +506,6 @@ p {
     justify-content: space-around;
     overflow: hidden;
 }
-
 .div-servicos {
     width: 80vw;
     display: flex;
@@ -595,7 +515,6 @@ p {
     padding-bottom: 20px;
     padding-top: 20px;
 }
-
 .servico {
     width: 340px;
     height: 340px;
@@ -605,18 +524,15 @@ p {
     transition: 2s;
     z-index: 12;
 }
-
 .p-servicos {
     padding: 5px;
 }
-
 .luz-servicos {
     position: absolute;
     width: 150px;
     z-index: 1;
     animation: luzserv 20s linear infinite;
 }
-
 @keyframes luzserv {
     0% {
         left: 0vw;
@@ -624,15 +540,12 @@ p {
         bottom: 10px;
         transform: rotate(-40deg);
     }
-
     40% {
         opacity: 1;
     }
-
     60% {
         opacity: 1;
     }
-
     100% {
         left: 90vw;
         opacity: 0;
@@ -640,9 +553,6 @@ p {
         transform: rotate(100deg);
     }
 }
-
-
-
 .titulo-imagem-servico {
     background-color: #006679;
     border-radius: 10px;
@@ -652,23 +562,14 @@ p {
     align-items: center;
     margin-bottom: 20px;
 }
-
 .imagem-servico {
     height: 70px;
 }
-
 .h2-servico {
     font-size: 1.5em;
     width: 240px;
 }
-
-
-
-
-
-
 /*********************FOOTER******************************/
-
 footer {
     height: 100px;
     background: linear-gradient(rgb(0, 0, 39), rgb(0, 1, 10), black);
@@ -677,21 +578,12 @@ footer {
     justify-content: center;
     z-index: 2;
 }
-
-
-
-
-
-
-/************************************************************************************************/
-
 .contato {
     display: flex;
     height: 75vh;
     justify-content: center;
     align-items: center;
 }
-
 /* Estrelas animadas */
 .stars {
     position: absolute;
@@ -701,28 +593,22 @@ footer {
     animation: moveStars 60s linear infinite;
     opacity: 0.4;
 }
-
 @keyframes moveStars {
     from {
         background-position: 0 0;
     }
-
     to {
         background-position: 5000px -1000px;
     }
 }
-
 h3 {
     font-size: 25pt;
 }
-
 /* Container */
 .container {
     position: relative;
     z-index: 1;
 }
-
-
 /* Formulário */
 .space-form {
     background: transparent;
@@ -733,24 +619,20 @@ h3 {
     box-shadow: 0 0 7px rgb(129, 129, 129);
     transition: 1s;
 }
-
 .space-form:hover {
     backdrop-filter: blur(0px);
     box-shadow: 0 0 12px #01fdf5;
     transition: 1s;
 }
-
 .space-form h2 {
     text-align: center;
     color: #01fdf5;
 }
-
 /* Inputs */
 .input-group {
     position: relative;
     margin-bottom: 30px;
 }
-
 .input-group input,
 .input-group textarea {
     width: 100%;
@@ -763,7 +645,6 @@ h3 {
     font-size: 14px;
     resize: none;
 }
-
 .input-group label {
     position: absolute;
     left: 0;
@@ -772,7 +653,6 @@ h3 {
     font-size: 14px;
     transition: 0.3s ease;
 }
-
 /* Efeito flutuante */
 .input-group input:focus~label,
 .input-group input:valid~label,
@@ -782,16 +662,12 @@ h3 {
     font-size: 12px;
     color: #01fdf5;
 }
-
 .input-group input:focus,
 .input-group textarea:focus {
     border-bottom: 2px solid #01fdf5;
     box-shadow: 0 5px 10px rgba(0, 247, 255, 0.2);
 }
-
-/* Botão */
 .btn_submit {
-
     padding: 12px;
     background: linear-gradient(#01fdf5, #003B46, #006679);
     border: none;
@@ -807,9 +683,7 @@ h3 {
 .btn_submit:hover {
     box-shadow: 0 0 5px #ececec;
 }
-
-/********************************************************************
-**********************************************************************/
+/********************************************************************/
 .feedbacks {
     display: flex;
     flex-direction: column;
@@ -818,7 +692,6 @@ h3 {
     text-align: center;
     align-items: center;
 }
-
 .container-feedbacks {
     display: flex;
     gap: 20px;
@@ -828,8 +701,6 @@ h3 {
     max-width: 1200px;
     margin-top: 100px;
 }
-
-/* Card de Feedback */
 .card {
     background: #fff;
     border-radius: 12px;
@@ -841,20 +712,15 @@ h3 {
     flex-direction: column;
     justify-content: space-between;
 }
-
 .card:hover {
     transform: translateY(-5px);
 }
-
 /* Estrelas */
 .starsfd {
     color: #FFD700;
-    /* Cor Dourada */
     font-size: 1.7rem;
     margin-bottom: 15px;
 }
-
-/* Texto do Depoimento */
 .feedback-text {
     color: #555;
     font-style: italic;
@@ -862,20 +728,16 @@ h3 {
     margin-bottom: 20px;
     font-size: 0.95rem;
 }
-
-/* Informações do Autor */
 .author-info {
     border-top: 1px solid #eee;
     padding-top: 15px;
 }
-
 .name {
     display: block;
     font-weight: bold;
     color: #333;
     font-size: 1.1rem;
 }
-
 .company {
     display: block;
     color: #888;
