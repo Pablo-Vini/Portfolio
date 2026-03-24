@@ -516,14 +516,20 @@ p {
     padding-top: 20px;
 }
 .servico {
-    width: 340px;
+    width: 360px;
     height: 340px;
     padding: 5px;
     border-radius: 10px;
     box-shadow: 0px 0px 2px white;
     transition: 2s;
     z-index: 12;
+    transition: .5s;
 }
+.servico:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 12px #01fdf5;
+}
+
 .p-servicos {
     padding: 5px;
 }
@@ -564,10 +570,11 @@ p {
 }
 .imagem-servico {
     height: 70px;
+    margin-left: 5px;
 }
 .h2-servico {
-    font-size: 1.5em;
-    width: 240px;
+    font-size: 1.4em;
+    width: 250px;
 }
 /*********************FOOTER******************************/
 footer {
